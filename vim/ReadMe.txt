@@ -78,6 +78,52 @@ Undoing your changes
 	u - undo stuff
 	Ctrl-R - redo stuff
 
+Common Edit commands
+	d - Delete: [range]d<motion>
+	    dd  - delete current line
+	    dj  - delete current and next line (j = down)
+	    2dj - delete current and 2 lines downward
+
+	c - Change (Same as d but put me in insert mode)
+	    cw - change word
+	    cc = S - Delete current line and enter insert mode  
+	    2cw - Delete 2 words and enter insert mode
+
+	~  - Toggle the case of character under cursor
+	g~ - Toggle case of [motion]
+	    g~w - Toggle case of cursor -> end of word
+	        tr|ue -> g~w -> trUE
+	    g~iw - Toggle case of entire word under cursor
+	        tr|ue -> g~iw -> TRUE
+
+Managing multiple files at once
+	:tabnew [file]       - Open a new tab with given file (or empty file)
+	gt or :tabn[ext]     - Next tab
+	gT or :tabp[revious] - Previous tab
+	:tabm[ove] # - Move current tab to position # (zero-indexed), no argument = end
+	:tabc        - Close current tab
+	:tabo        - Close all other tabs except current
+
+Macro
+	1. qa - Record and save to a register
+	   @a - Repeat a register actions
+
+
+
+Online reference
+	http://www.radford.edu/~mhtay/CPSC120/VIM_Editor_Commands.htm
+
+
+NERDTree 
+	Start
+		vim :NERDTree
+			:NERDTreeToggle
+			:NERDTreeClose
+		vim .
+	Switch window
+		<Ctrl>+w twice
+
+
 
 
 
