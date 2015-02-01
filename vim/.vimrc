@@ -1,5 +1,3 @@
-Content for .vimrc
-
 set nocompatible filetype off " Required
 
 set rtp+=~/.vim/bundle/vundle/ 
@@ -22,7 +20,3 @@ let NERDTreeMinimalUI=1
 let NERDTreeDirArrows=1
 
 filetype plugin indent on " Required
-
-.zsh content
-
-Theme: cloud
