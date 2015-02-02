@@ -1,7 +1,11 @@
 Intro tutorial from Shawn Biddle 
-1: https://www.youtube.com/watch?v=Nim4_f5QUxA&list=PLd-haPBm4f6X8cgU5fViIVL_jaZZl-m-E&index=3
-2: https://www.youtube.com/watch?v=2pqipq-UEwQ&index=5&list=PLd-haPBm4f6X8cgU5fViIVL_jaZZl-m-E
-
+	1: Tutorials
+		https://www.youtube.com/watch?v=Nim4_f5QUxA&list=PLd-haPBm4f6X8cgU5fViIVL_jaZZl-m-E&index=3
+ 		https://www.youtube.com/watch?v=2pqipq-UEwQ&index=5&list=PLd-haPBm4f6X8cgU5fViIVL_jaZZl-m-E
+	2: Dotfiles
+		http://shawnbiddle.com/dotfiles/
+	3: .install
+		https://github.com/shawncplus/dotfiles/blob/master/install
 There's notes under his YouTube video but here's a re-organized version:
 
 Starting Vim:
@@ -123,7 +127,12 @@ NERDTree
 	Switch window
 		<Ctrl>+w twice
 
+Powerline - Airline
+	Use airline due to Glyph problem about Powerline
+	Use setting form http://jchain.github.io/blog/2013/07/17/fly-with-vim-airline/
 
+A great Vundle guide and .vimrc
+	http://c7.se/switching-to-vundle/
 
 
 
