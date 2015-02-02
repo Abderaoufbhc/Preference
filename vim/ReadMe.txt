@@ -134,7 +134,8 @@ Powerline - Airline
 A great Vundle guide and .vimrc
 	http://c7.se/switching-to-vundle/
 
-
+A simple guide about Solarized theme and Tmux
+	http://fideloper.com/mac-vim-tmux
 
 
 
