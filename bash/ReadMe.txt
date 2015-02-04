@@ -1,0 +1,7 @@
+To-read
+	1. bash color - ls-color
+		http://geoff.greer.fm/lscolors/
+	2. Pastel color scheme example
+		https://bbs.archlinux.org/viewtopic.php?id=51818
+	3. Basic tutorial
+		https://www.digitalocean.com/community/tutorials/how-to-customize-your-bash-prompt-on-a-linux-vps

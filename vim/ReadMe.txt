@@ -140,6 +140,9 @@ A simple guide about Solarized theme and Tmux
 
 
 
+To-read
+	1. Color scheme Editor for Vim
+		http://bytefluent.com/vivify/
 
 
 
