@@ -40,8 +40,8 @@ set t_Co=256
 set laststatus=2
 set fillchars+=stl:\ ,stlnc:\
 let g:airline_theme             = 'powerlineish'
-let g:airline_enable_branch     = 1
-let g:airline_enable_syntastic  = 1
+let g:airline#extensions#branch#enabled = 1                                                                                         
+let g:airline#extensions#syntastic#enabled = 1
 
 Bundle 'tpope/vim-fugitive'
 
