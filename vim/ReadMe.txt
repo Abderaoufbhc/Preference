@@ -131,14 +131,8 @@ Powerline - Airline
 	Use airline due to Glyph problem about Powerline
 	Use setting form http://jchain.github.io/blog/2013/07/17/fly-with-vim-airline/
 
-A great Vundle guide and .vimrc
-	http://c7.se/switching-to-vundle/
-
 A simple guide about Solarized theme and Tmux
 	http://fideloper.com/mac-vim-tmux
-
-
-
 
 To-read
 	1. Color scheme Editor for Vim
@@ -146,6 +140,14 @@ To-read
 
 
 
+
+Follow this to download
+	A great Vundle guide and .vimrc
+	http://c7.se/switching-to-vundle/
+Install patched fonts
+	git clone https://github.com/powerline/fonts .
+	./fonts/install.sh
+From Terminal, pick one of the powerline fonts
 
 
 
