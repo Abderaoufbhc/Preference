@@ -1,32 +1,46 @@
 {
-	"file_exclude_patterns":
-	[
-		"*.pyc",
-		"*.pyo",
-		"*.exe",
-		"*.dll",
-		"*.obj",
-		"*.o",
-		"*.a",
-		"*.lib",
-		"*.so",
-		"*.dylib",
-		"*.ncb",
-		"*.sdf",
-		"*.suo",
-		"*.pdb",
-		"*.idb",
-		".DS_Store",
-		"*.class",
-		"*.psd",
-		"*.db",
-		"Icon
-"
-	],
-	"ignored_packages":
-	[
-		"Vintage"
-	],
-	"tab_size": 2,
-	"translate_tabs_to_spaces": true
+  // Space Gray theme and color theme setting. Choose only one from the following
+  // Spacegray default
+  "theme": "Spacegray.sublime-theme",
+  "color_scheme": "Packages/Theme - Spacegray/base16-ocean.dark.tmTheme",
+  // Spacegray Light
+  // "theme": "Spacegray Light.sublime-theme",
+  // "color_scheme": "Packages/Theme - Spacegray/base16-ocean.light.tmTheme",
+  // Spacegray Eighties
+  // "theme": "Spacegray Eighties.sublime-theme",
+  // "color_scheme": "Packages/Theme - Spacegray/base16-eighties.dark.tmTheme"
+
+  // Tabs and spaces
+  "tab_size": 2,
+  "translate_tabs_to_spaces": true,
+
+  // others
+  "file_exclude_patterns":
+    [
+    "*.pyc",
+    "*.pyo",
+    "*.exe",
+    "*.dll",
+    "*.obj",
+    "*.o",
+    "*.a",
+    "*.lib",
+    "*.so",
+    "*.dylib",
+    "*.ncb",
+    "*.sdf",
+    "*.suo",
+    "*.pdb",
+    "*.idb",
+    "*.class",
+    "*.psd",
+    "*.db",
+    // For Mac OS system files
+    ".DS_Store",
+    "Icon"
+  ],
+  "ignored_packages":
+  [
+    "Vintage"
+  ]
 }
