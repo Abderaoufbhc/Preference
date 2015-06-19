@@ -1,3 +1,23 @@
+Quick Installation:
+1. Download from Github
+  $ mkdir ~/.vim/bundle
+  $ git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
+2. Copy the ".vimrc" to "~/.vimrc"
+  $ curl -o ~/.vimrc https://raw.githubusercontent.com/yinanfang/Preference/master/vim/.vimrc
+3. Open vim and install plugin
+  :BundleInstall
+  
+Extra step for Mac:
+1. For Mac, install patched fonts
+  $ git clone https://github.com/powerline/fonts .
+  $ ./fonts/install.sh
+2. From Terminal Preference, pick one of the powerline fonts
+  
+Detailed Tutorial:
+1. Text 
+  Install instruction and some preferred plugins
+  http://c7.se/switching-to-vundle/
+2. Video
 Intro tutorial from Shawn Biddle 
 	1: Tutorials
 		https://www.youtube.com/watch?v=Nim4_f5QUxA&list=PLd-haPBm4f6X8cgU5fViIVL_jaZZl-m-E&index=3
@@ -6,7 +26,6 @@ Intro tutorial from Shawn Biddle
 		http://shawnbiddle.com/dotfiles/
 	3: .install
 		https://github.com/shawncplus/dotfiles/blob/master/install
-There's notes under his YouTube video but here's a re-organized version:
 
 Starting Vim:
 	vim <file>
@@ -138,16 +157,6 @@ To-read
 	1. Color scheme Editor for Vim
 		http://bytefluent.com/vivify/
 
-
-
-
-Follow this to download
-	A great Vundle guide and .vimrc
-	http://c7.se/switching-to-vundle/
-Install patched fonts
-	git clone https://github.com/powerline/fonts .
-	./fonts/install.sh
-From Terminal, pick one of the powerline fonts
 
 
 
