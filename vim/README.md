@@ -1,23 +1,31 @@
 
-Vim
-=======
+# Vim
+------
+Quick installation guide and tutorial about vim
 
-Quick Installation:
+## Quick Installation:
 1. Download from Github
-  $ mkdir ~/.vim/bundle
-  $ git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
+
+    $ mkdir ~/.vim/bundle
+    $ git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
+
 2. Copy the ".vimrc" to "~/.vimrc"
-  $ curl -o ~/.vimrc https://raw.githubusercontent.com/yinanfang/Preference/master/vim/.vimrc
+
+`$ curl -o ~/.vimrc` https://raw.githubusercontent.com/yinanfang/Preference/master/vim/.vimrc
+
 3. Open vim and install plugin
-  :BundleInstall
+
+    :BundleInstall
+
+### Extra step for Mac:
+4. For Mac, install patched fonts
+
+    $ git clone https://github.com/powerline/fonts .
+    $ ./fonts/install.sh
+
+5. From Terminal Preference, pick one of the powerline fonts
   
-Extra step for Mac:
-1. For Mac, install patched fonts
-  $ git clone https://github.com/powerline/fonts .
-  $ ./fonts/install.sh
-2. From Terminal Preference, pick one of the powerline fonts
-  
-Detailed Tutorial:
+## Detailed Tutorial:
 1. Text 
   Install instruction and some preferred plugins
   http://c7.se/switching-to-vundle/
@@ -160,5 +168,9 @@ A simple guide about Solarized theme and Tmux
 To-read
 	1. Color scheme Editor for Vim
 		http://bytefluent.com/vivify/
+
+
+
+
 
 
