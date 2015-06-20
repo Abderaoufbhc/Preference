@@ -4,24 +4,15 @@ Quick installation guide and tutorial about vim
 
 ## Quick Installation:
 1. Download from Github
-
-    $ mkdir ~/.vim/bundle
-    $ git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
-
+	$ mkdir ~/.vim/bundle
+	$ git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
 2. Copy the ".vimrc" to "~/.vimrc"
-
-`$ curl -o ~/.vimrc` https://raw.githubusercontent.com/yinanfang/Preference/master/vim/.vimrc
-
+    $ curl -o ~/.vimrc https://raw.githubusercontent.com/yinanfang/Preference/master/vim/.vimrc
 3. Open vim and install plugin
-
     :BundleInstall
-
-### Extra step for Mac:
-4. For Mac, install patched fonts
-
+4. Install patched fonts (Two extrea steps for Mac)
     $ git clone https://github.com/powerline/fonts .
     $ ./fonts/install.sh
-
 5. From Terminal Preference, pick one of the powerline fonts
   
 ## Detailed Tutorial:
