@@ -1,6 +1,5 @@
-
 # Vim
-------
+
 Quick installation guide and tutorial about vim
 
 ## Quick Installation:
