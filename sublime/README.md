@@ -10,7 +10,12 @@ Set Theme & Color Theme:
     
 Add Plugin: 
 
+    SFTP
     JsFormat
+    DocBlockr
+    SublimeLinter-jshint
+    SublimeREPL
+    Anaconda
     
 Command Line tools (https://gist.github.com/artero/1236170)
 
