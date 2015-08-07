@@ -21,6 +21,7 @@ Install patched fonts
 
     $ git clone https://github.com/powerline/fonts .
     $ ./fonts/install.sh
+    $ rm -rf ./fonts
 
 From Terminal Preference, pick one of the powerline fonts
 Take a screen shot...
