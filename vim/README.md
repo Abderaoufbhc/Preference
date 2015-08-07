@@ -19,7 +19,7 @@ Open vim and install plugin
 ###### Two extrea steps for Mac:
 Install patched fonts
 
-    $ git clone https://github.com/powerline/fonts .
+    $ git clone https://github.com/powerline/fonts
     $ ./fonts/install.sh
     $ rm -rf ./fonts
 
