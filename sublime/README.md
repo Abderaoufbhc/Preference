@@ -16,6 +16,7 @@ Add Plugin:
     SublimeLinter-jshint
     SublimeREPL
     Anaconda (Enforced PEP)
+    Phpcs
 
 Command Line tools (https://gist.github.com/artero/1236170)
 
