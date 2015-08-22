@@ -4,7 +4,7 @@
 
 ### [Homebrew](http://brew.sh/)
 
-  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    $ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 ### wget
 
@@ -14,7 +14,7 @@ No wget on Mac. Use curl instead.
 
 ### CocoaPod (with preinstalled gem)
 
-  sudo gem install cocoapods
+    $ sudo gem install cocoapods
 
 ## Javascript
 
@@ -28,8 +28,8 @@ Download from [Node.js site](https://nodejs.org/download/) and install the packa
 
 System-wide installation of [pear](https://pear.php.net/manual/en/installation.getting.php)
 
-  wget http://pear.php.net/go-pear.phar
-  sudo php -d detect_unicode=0 go-pear.phar
+    $ wget http://pear.php.net/go-pear.phar
+    $ sudo php -d detect_unicode=0 go-pear.phar
 
 ## Python
 

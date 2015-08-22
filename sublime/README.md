@@ -2,7 +2,7 @@
 
 ## Install [Package Control](https://packagecontrol.io/):
 
-  https://packagecontrol.io/installation#st3
+[Instruction](https://packagecontrol.io/installation#st3)
 
 ## Set Theme & Color Theme:
 
@@ -26,23 +26,23 @@
 
 SFTP
 
-  Need license
+    Need license
 
 Phpcs
 
-  pear install PHP_CodeSniffer
+    $ pear install PHP_CodeSniffer
 
-  Preferences -> Package Settings -> PHP Code Sniffer -> Settings User
-  Add the following:
-  {
-    "phpcs_executable_path": "/usr/bin/phpcs"
-  }
+    Preferences -> Package Settings -> PHP Code Sniffer -> Settings User
+    Add the following:
+    {
+      "phpcs_executable_path": "/usr/bin/phpcs"
+    }
 
 
 
 ## Command Line tools (https://gist.github.com/artero/1236170)
 
-    ln -s /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl /usr/local/bin/sublime
+    $ ln -s /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl /usr/local/bin/sublime
 
 ## Sublime Test 2 specific
 
