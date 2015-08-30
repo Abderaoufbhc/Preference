@@ -26,19 +26,22 @@
 
 SFTP
 
-    Need license
+    Package Preference
+    {
+      "email": "xiaosong@xiaosong.me",
+      "sftp": "d419f6-de89e9-0aae59-2acea1-07f92a"
+    }
 
 Phpcs
 
     $ pear install PHP_CodeSniffer
 
-    Preferences -> Package Settings -> PHP Code Sniffer -> Settings User
-    Add the following:
+    Package Preference
     {
       "phpcs_executable_path": "/usr/bin/phpcs"
     }
 
-
+Package Preference location:     Preferences -> Package Settings -> My Plugin -> Settings User
 
 ## Command Line tools (https://gist.github.com/artero/1236170)
 
