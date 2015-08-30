@@ -29,7 +29,7 @@ SFTP
     Package Preference
     {
       "email": "xiaosong@xiaosong.me",
-      "sftp": "d419f6-de89e9-0aae59-2acea1-07f92a"
+      "product_key": "d419f6-de89e9-0aae59-2acea1-07f92a"
     }
 
 Phpcs
