@@ -13,7 +13,8 @@
     - SFTP: Commercial SFTP/FTP plugin - upload, sync, browse, remote edit, diff and vcs integration
   - Javascript
     - JsFormat: Javascript formatting for Sublime Text 2 & 3
-    - SublimeLinter-jshint: SublimeLinter plugin for JavaScript, using jshint.
+    - SublimeLinter3: Interactive code linting framework for Sublime Text 3
+    - SublimeLinter-eslint: This linter plugin for SublimeLinter provides an interface to ESLint
   - PHP
     - Phpcs: PHP CodeSniffer, PHP Coding Standard Fixer, Linter and Mess Detector Support for Sublime Text
   - Python
