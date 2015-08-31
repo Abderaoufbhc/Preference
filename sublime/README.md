@@ -14,7 +14,6 @@
   - Javascript
     - JsFormat: Javascript formatting for Sublime Text 2 & 3
     - SublimeLinter3: Interactive code linting framework for Sublime Text 3
-    - SublimeLinter-eslint: This linter plugin for SublimeLinter provides an interface to ESLint
   - PHP
     - Phpcs: PHP CodeSniffer, PHP Coding Standard Fixer, Linter and Mess Detector Support for Sublime Text
   - Python
@@ -22,6 +21,9 @@
   - SublimeREPL
   - Documentation:
     - DocBlockr: Simplifies writing DocBlock comments in Javascript, PHP, CoffeeScript, Actionscript, C & C++
+  - SublimeLinter/SublimeLinter3
+    - SublimeLinter-eslint: This linter plugin for SublimeLinter provides an interface to ESLint
+    - SublimeLinter-phpcs: SublimeLinter plugin for PHP, using phpcs.
 
 ## Install Instruction
 
@@ -33,14 +35,12 @@ SFTP
       "product_key": "d419f6-de89e9-0aae59-2acea1-07f92a"
     }
 
-Phpcs
+SublimeLinter-phpcs ([Mac specific](http://viastudio.com/configure-php-codesniffer-for-mac-os-x/))
 
     $ pear install PHP_CodeSniffer
-
-    Package Preference
-    {
-      "phpcs_executable_path": "/usr/bin/phpcs"
-    }
+    $ sudo mkdir -p /Library/Server/Web/Config/php
+    $ sudo touch /Library/Server/Web/Config/php/local.ini
+    $ echo 'include_path = ".:'`pear config-get php_dir`'"' | sudo tee -a /Library/Server/Web/Config/php/local.ini
 
 Package Preference location:     Preferences -> Package Settings -> My Plugin -> Settings User
 
