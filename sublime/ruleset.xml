@@ -37,10 +37,16 @@
 
     <!-- Customization -->
     <exclude name="PEAR.Functions.FunctionDeclaration.BraceOnSameLine"/>
+    <exclude name="Generic.Files.LineLength.TooLong"/>
   </rule>
 
   <!-- Customized Settings -->
   <rule ref="PEAR.WhiteSpace.ScopeIndent">
+    <properties>
+      <property name="indent" value="2"/>
+    </properties>
+  </rule>
+    <rule ref="PEAR.Functions.FunctionCallSignature">
     <properties>
       <property name="indent" value="2"/>
     </properties>
