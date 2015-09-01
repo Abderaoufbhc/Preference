@@ -37,12 +37,32 @@ SFTP
 
 SublimeLinter-phpcs ([Mac specific](http://viastudio.com/configure-php-codesniffer-for-mac-os-x/))
 
+    // Install phpcs
     $ pear install PHP_CodeSniffer
     $ sudo mkdir -p /Library/Server/Web/Config/php
     $ sudo touch /Library/Server/Web/Config/php/local.ini
     $ echo 'include_path = ".:'`pear config-get php_dir`'"' | sudo tee -a /Library/Server/Web/Config/php/local.ini
 
-Package Preference location:     Preferences -> Package Settings -> My Plugin -> Settings User
+    // configure phpcs rules
+    // Find customized configuration folder
+    $ pear config-show | grep php_dir
+    // Get into the folder
+    $ cd /usr/share/pear/PHP/CodeSniffer/Standards
+    // Check existing standards
+    $ phpcs -i
+    // Create a new one if not exist
+    $ mkdir MyStandard; cd MyStandard
+    // Add "ruleset.xml" to the folder
+    // Verify if the phpcs works
+    $ phpcs index.php --standard=MyStandard --report=source
+    // Set it as default standard
+    sudo phpcs --config-set default_standard MyStandard
+
+    // Install Sublime plugin SublimeLinter-phpcs
+    // Add "SublimeLinter.sublime-settings"
+    Look for user.linters.phpcs.standard = "MyStandard"
+
+Package Preference location: Preferences -> Package Settings -> My Plugin -> Settings User
 
 ## Command Line tools (https://gist.github.com/artero/1236170)
 
