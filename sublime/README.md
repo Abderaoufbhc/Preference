@@ -55,11 +55,11 @@ SublimeLinter-phpcs ([Mac specific](http://viastudio.com/configure-php-codesniff
     // Add "ruleset.xml" to the folder
     // Verify if the phpcs works
     $ phpcs index.php --standard=MyStandard --report=source
-    // Set it as default standard
+    // Set it as default standard for calling phpcs from commandline
     sudo phpcs --config-set default_standard MyStandard
 
     // Install Sublime plugin SublimeLinter-phpcs
-    // Add "SublimeLinter.sublime-settings"
+    // Add "SublimeLinter.sublime-settings" for SublimeLinter's use
     Look for user.linters.phpcs.standard = "MyStandard"
 
 Package Preference location: Preferences -> Package Settings -> My Plugin -> Settings User
