@@ -25,6 +25,7 @@
     - SublimeLinter-csslint: SublimeLinter plugin for CSS, using csslint.
     - SublimeLinter-eslint: This linter plugin for SublimeLinter provides an interface to ESLint
     - SublimeLinter-phpcs: SublimeLinter plugin for PHP, using phpcs.
+    - SublimeLinter-html-tidy: SublimeLinter 3 plugin for html tidy.
 
 ## Install Instruction
 
