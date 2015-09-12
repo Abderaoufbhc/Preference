@@ -22,10 +22,15 @@
   - Documentation:
     - DocBlockr: Simplifies writing DocBlock comments in Javascript, PHP, CoffeeScript, Actionscript, C & C++
   - SublimeLinter/SublimeLinter3
+    - SublimeLinter-csslint: SublimeLinter plugin for CSS, using csslint.
     - SublimeLinter-eslint: This linter plugin for SublimeLinter provides an interface to ESLint
     - SublimeLinter-phpcs: SublimeLinter plugin for PHP, using phpcs.
 
 ## Install Instruction
+
+csslint, eslint
+
+    sudo npm install -g csslint eslint
 
 SFTP
 
