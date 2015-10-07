@@ -10,7 +10,10 @@
     },
     "env": {
         "node": true,
-        "browser": true
+        "browser": true,
+        "jquery": false
     },
     "extends": "eslint:recommended"
 }
+
+// Reference to reset all: https://gist.github.com/cletusw/e01a85e399ab563b1236
