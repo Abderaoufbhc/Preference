@@ -28,7 +28,7 @@ Download from [Node.js site](https://nodejs.org/download/) and install the packa
 
 System-wide installation of [pear](https://pear.php.net/manual/en/installation.getting.php)
 
-    $ wget http://pear.php.net/go-pear.phar
+    $ curl -O  http://pear.php.net/go-pear.phar
     $ sudo php -d detect_unicode=0 go-pear.phar
 
 ## Python
