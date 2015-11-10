@@ -22,10 +22,13 @@
   - Documentation:
     - DocBlockr: Simplifies writing DocBlock comments in Javascript, PHP, CoffeeScript, Actionscript, C & C++
   - SublimeLinter/SublimeLinter3
-    - SublimeLinter-csslint: SublimeLinter plugin for CSS, using csslint.
-    - SublimeLinter-eslint: This linter plugin for SublimeLinter provides an interface to ESLint
-    - SublimeLinter-php: SublimeLinter 3 plugin for PHP, using php -l.
-    - SublimeLinter-html-tidy: SublimeLinter 3 plugin for html tidy.
+    - The main package needs to be installed first!!
+    - Make "debug": true in SublimeLinter.sublime-settings to find out issue
+    - Sub packages:
+      - SublimeLinter-csslint: SublimeLinter plugin for CSS, using csslint.
+      - SublimeLinter-eslint: This linter plugin for SublimeLinter provides an interface to ESLint
+      - SublimeLinter-php: SublimeLinter 3 plugin for PHP, using php -l.
+      - SublimeLinter-html-tidy: SublimeLinter 3 plugin for html tidy.
   - Outdated
     - pear has installation problem with El Capitan
     - Phpcs: PHP CodeSniffer, PHP Coding Standard Fixer, Linter and Mess Detector Support for Sublime Text
