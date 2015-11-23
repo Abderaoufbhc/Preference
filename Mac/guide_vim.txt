@@ -7,15 +7,15 @@ Download from Github
 
     $ mkdir ~/.vim/bundle
     $ git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
-	
+
 Copy the ".vimrc" to "~/.vimrc"
 
-    $ curl -o ~/.vimrc https://raw.githubusercontent.com/yinanfang/Preference/master/vim/.vimrc
+    $ curl https://raw.githubusercontent.com/yinanfang/Preference/master/vim/.vimrc -o ~/.vimrc
 
 Open vim and install plugin
 
     :BundleInstall
-    
+
 ###### Two extrea steps for Mac:
 Install patched fonts
 
@@ -27,11 +27,11 @@ From Terminal Preference, pick one of the powerline fonts
 Take a screen shot...
 
 ## Detailed Tutorial:
-1. Text 
+1. Text
   Install instruction and some preferred plugins
   http://c7.se/switching-to-vundle/
 2. Video
-Intro tutorial from Shawn Biddle 
+Intro tutorial from Shawn Biddle
 	1: Tutorials
 		https://www.youtube.com/watch?v=Nim4_f5QUxA&list=PLd-haPBm4f6X8cgU5fViIVL_jaZZl-m-E&index=3
  		https://www.youtube.com/watch?v=2pqipq-UEwQ&index=5&list=PLd-haPBm4f6X8cgU5fViIVL_jaZZl-m-E
@@ -122,7 +122,7 @@ Common Edit commands
 
 	c - Change (Same as d but put me in insert mode)
 	    cw - change word
-	    cc = S - Delete current line and enter insert mode  
+	    cc = S - Delete current line and enter insert mode
 	    2cw - Delete 2 words and enter insert mode
 
 	~  - Toggle the case of character under cursor
@@ -150,7 +150,7 @@ Online reference
 	http://www.radford.edu/~mhtay/CPSC120/VIM_Editor_Commands.htm
 
 
-NERDTree 
+NERDTree
 	Start
 		vim :NERDTree
 			:NERDTreeToggle
