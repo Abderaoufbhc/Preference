@@ -64,13 +64,14 @@
     - Spark Inspector
     - Alcatraz:
       - Themes: Ciapre
-      - Plugins: Auto-Importer, CocoaPods, KSImageNamed, OMColorSense, RTImageAssets,       SCXcodeSwitchExpander, VVDocumenter-Xcode, XAlign, XcodeColors
+      - Plugins: Auto-Importer, Backlight, BBUDebuggerTuckAway, BBUFullIssueNavigator, ClangFormat, CocoaPods, DerivedData Exterminator, FuzzyAutocomplete, GitDiff, KSImageNamed, OMColorSense, RTImageAssets, SCXcodeMinimap, SCXcodeSwitchExpander, VVDocumenter-Xcode, XAlign, XcodeColors, XToDo, XVim
+      - Source: http://nshipster.com/xcode-plugins/
   - Preference:
     - Behaviors:
       - Sound: Starts - Blow; Issue - Tink; Succeeds - Submarine; Fails - Purr
       - Fonts & Colors: Ciapre
       - Text Editing: Editing: Check: Line numbers, Automatically trim trailing whitespace (Including whitespace-only lines)
-      - Indentation: Indent all with 2 spaces,
+      - Indentation: Indent all with 2 spaces. Tab width: 2. Indent wrapped lines by 2 spaces
       - Downloads: download everything
 
 ---

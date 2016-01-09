@@ -14,8 +14,6 @@
   - Javascript
     - JsFormat: Javascript formatting for Sublime Text 2 & 3
     - SublimeLinter3: Interactive code linting framework for Sublime Text 3
-  - PHP
-
   - Python
     - Anaconda: Anaconda turns your Sublime Text 3 in a full featured Python development IDE including autocompletion, code linting, IDE features, autopep8 formating, McCabe complexity checker and Vagrant for Sublime Text 3 using Jedi, PyFlakes, pep8, PyLint, pep257 and McCabe that will never freeze your Sublime Text 3
   - SublimeREPL
@@ -29,6 +27,8 @@
       - SublimeLinter-eslint: This linter plugin for SublimeLinter provides an interface to ESLint
       - SublimeLinter-php: SublimeLinter 3 plugin for PHP, using php -l.
       - SublimeLinter-html-tidy: SublimeLinter 3 plugin for html tidy.
+  - Vim
+    - https://github.com/guillermooo/Vintageous
   - Outdated
     - pear has installation problem with El Capitan
     - Phpcs: PHP CodeSniffer, PHP Coding Standard Fixer, Linter and Mess Detector Support for Sublime Text

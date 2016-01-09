@@ -71,8 +71,8 @@ Scanning the canvas
 
 Basics: wWbBeE
 P.S.
-	word - separated by anything that's not a character
-	WORD - separated by
+	word - separated by anything that's not a character (punctuation considered words)
+	WORD - separated by spaces
 
 	w - Forward to the beginning of next word
 	W - Forward to the beginning of the next WORD
