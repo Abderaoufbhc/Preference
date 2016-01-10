@@ -16,22 +16,19 @@ Open vim and install plugin
 
     :BundleInstall
 
-###### Two extrea steps for Mac:
-Install patched fonts
+###### Two extrea steps for Mac patched fonts
 
     $ git clone https://github.com/powerline/fonts
     $ ./fonts/install.sh
     $ rm -rf ./fonts
 
-From Terminal Preference, pick one of the powerline fonts
-Take a screen shot...
+In Terminal/iTerm Preference, choose font "11pt Fira Mono Medium for Powerline"
 
 ## Detailed Tutorial:
-1. Text
-  Install instruction and some preferred plugins
+1. Install instruction and some preferred plugins
   http://c7.se/switching-to-vundle/
-2. Video
-Intro tutorial from Shawn Biddle
+2. Basic Tutorial Video
+  from Shawn Biddle
   1: Tutorials
     https://www.youtube.com/watch?v=Nim4_f5QUxA&list=PLd-haPBm4f6X8cgU5fViIVL_jaZZl-m-E&index=3
     https://www.youtube.com/watch?v=2pqipq-UEwQ&index=5&list=PLd-haPBm4f6X8cgU5fViIVL_jaZZl-m-E
@@ -45,25 +42,11 @@ Intro tutorial from Shawn Biddle
   2: Why Vi/Vim
     http://www.viemu.com/a-why-vi-vim.html
 
+## Vim Cheat Sheet
 
 Starting Vim:
   vim <file>
   vim, :e <file>    // 'e' for edit
-
-Pen to the page:
-  i - Enter insert mode at cursor
-  I - Enter insert mode at first non-blank character
-  s - Delete character under cursor and enter insert mode
-  S - Delete line and begin insert at beginning of same line
-  a - Enter insert mode _after_ cursor
-  A - Enter insert mode at the end of the line
-  o - Enter insert mode on the next line
-  O - enter insert mode on the above line
-  C - Delete from cursor to end of line and begin insert
-
-Picking up the brush
-  ESC
-  Ctrl+[
 
 Scanning the canvas
       k
@@ -72,11 +55,36 @@ Scanning the canvas
       v
       j
 
-  E.g. [number]j
-      10j -> execute j command 10 times
+Pen to the page:
+  a - Enter insert mode _after_ cursor
+  A - Enter insert mode at the end of the line  i - Enter insert mode at cursor
+  c - Change (Same as d but put me in insert mode)
+      cw - change word
+      cc = S - Delete current line and enter insert mode
+      2cw - Delete 2 words and enter insert mode
+  C - Delete from cursor to end of line and begin insert
+  d - Delete: [range]d<motion>
+      dd  - delete current line
+      dj  - delete current and next line (j = down)
+      2dj - delete current and 2 lines downward
+  D - Delete to the end of the line
+  i - Enter insert mode at the cursor
+  I - Enter insert mode at first non-blank character
+  o - Enter insert mode on the next line
+  O - enter insert mode on the above line  s - Delete character under cursor and enter insert mode
+  s - Delete character under cursor and enter insert mode
+  S - Delete line and begin insert at beginning of same line
 
-Basics: wWbBeE
-P.S.
+Handling the brush
+  y - Yank. Example: yw (yank word)
+  yy - yank the line you're on
+  p - paste after cursor
+  P - paste before cursor
+  v - Visual selection
+  u - undo stuff
+  Ctrl-R - redo stuff
+
+Moving the brush
   word - separated by anything that's not a character (punctuation considered words)
   WORD - separated by spaces
 
@@ -92,8 +100,7 @@ P.S.
   gg - To the top of the file
   G - To the end of the file
 
-Slightly less basic: fFtT All follow [(n)um] syntax
-
+  fFtT All follow [(n)um] syntax
   [n]f<o> - Forward until (nth) (o)  (Inclusive)
   [n]F<o> - Backward until (nth) (o) (Inclusive)
   [n]t<o> - Forward until (nth) (o)  (Exclusive)
@@ -109,28 +116,12 @@ Searching
   n  - Next result, forward
   N  - Next result, backward
 
-Copy/Paste
-  y - Yank. Example: yw (yank word)
-  yy - yank the line you're on
-  p - paste after cursor
-  P - paste before cursor
-  v - Visual selection
+Picking up the brush
+  ESC
+  Ctrl+[
 
-Undoing your changes
-  u - undo stuff
-  Ctrl-R - redo stuff
 
-Common Edit commands
-  d - Delete: [range]d<motion>
-      dd  - delete current line
-      dj  - delete current and next line (j = down)
-      2dj - delete current and 2 lines downward
-
-  c - Change (Same as d but put me in insert mode)
-      cw - change word
-      cc = S - Delete current line and enter insert mode
-      2cw - Delete 2 words and enter insert mode
-
+Advanced
   ~  - Toggle the case of character under cursor
   g~ - Toggle case of [motion]
       g~w - Toggle case of cursor -> end of word

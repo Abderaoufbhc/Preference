@@ -64,7 +64,7 @@
     - Spark Inspector
     - Alcatraz:
       - Themes: Ciapre
-      - Plugins: Auto-Importer, Backlight, BBUDebuggerTuckAway, BBUFullIssueNavigator, ClangFormat, CocoaPods, DerivedData Exterminator, FuzzyAutocomplete, GitDiff, KSImageNamed, OMColorSense, RTImageAssets, SCXcodeMinimap, SCXcodeSwitchExpander, VVDocumenter-Xcode, XAlign, XcodeColors, XToDo, XVim
+      - Plugins: Auto-Importer, Backlight, BBUDebuggerTuckAway, BBUFullIssueNavigator, ClangFormat, CocoaPods, DerivedData Exterminator, FuzzyAutocomplete, GitDiff, KSImageNamed, OMColorSense, RTImageAssets, SCXcodeMinimap, SCXcodeSwitchExpander, ShowInGithub, VVDocumenter-Xcode, XAlign, XcodeColors, XToDo, XVim
       - Source: http://nshipster.com/xcode-plugins/
   - Preference:
     - Behaviors:
