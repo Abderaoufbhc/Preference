@@ -56,24 +56,29 @@ Scanning the canvas
       j
 
 Pen to the page:
-  a - Enter insert mode _after_ cursor
-  A - Enter insert mode at the end of the line  i - Enter insert mode at cursor
+  a - Insert after cursor
+  A - Insert at the end of the line
   c - Change (Same as d but put me in insert mode)
       cw - change word
-      cc = S - Delete current line and enter insert mode
-      2cw - Delete 2 words and enter insert mode
+      cc = S - Delete current line and insert
+      2cw - Delete 2 words and insert
+      ci( - Delete inner block inside () and insert
   C - Delete from cursor to end of line and begin insert
-  d - Delete: [range]d<motion>
+  d - Delete/Cut: [range]d<motion>
       dd  - delete current line
       dj  - delete current and next line (j = down)
       2dj - delete current and 2 lines downward
+      di( - Delete inner block inside ()
   D - Delete to the end of the line
-  i - Enter insert mode at the cursor
-  I - Enter insert mode at first non-blank character
-  o - Enter insert mode on the next line
-  O - enter insert mode on the above line  s - Delete character under cursor and enter insert mode
+  i - Insert at the cursor
+  I - Insert at first non-blank character
+  J - Join line below to the current one
+  o - Insert in the next line
+  O - Insert in the above line
   s - Delete character under cursor and enter insert mode
   S - Delete line and begin insert at beginning of same line
+  x - Delete [count] characters under and after the cursor
+  X - Delete [count] characters before the cursor
 
 Handling the brush
   y - Yank. Example: yw (yank word)
@@ -84,7 +89,7 @@ Handling the brush
   u - undo stuff
   Ctrl-R - redo stuff
 
-Moving the brush
+Moving the brush (Motion)
   word - separated by anything that's not a character (punctuation considered words)
   WORD - separated by spaces
 
@@ -99,6 +104,14 @@ Moving the brush
   ^ - Move to the first non-blank character of the line
   gg - To the top of the file
   G - To the end of the file
+  % - Moves from a parenthesis (or similar grouping character) to its matching one
+  (
+  )
+  {
+  }
+  +/ - up/down
+  '
+  `
 
   fFtT All follow [(n)um] syntax
   [n]f<o> - Forward until (nth) (o)  (Inclusive)
@@ -106,19 +119,33 @@ Moving the brush
   [n]t<o> - Forward until (nth) (o)  (Exclusive)
   [n]T<o> - Backward until (nth) (o) (Exclusive)
 
-Searching
-  /  - Forward
-  ?  - Backward
-  *  - Word under cursor - forward  (bounded)
-  g* - Word under cursor - forward  (unbounded)
-  #  - Word under cursor - backward (bounded)
-  g# - Word under cursor - backward (unbounded)
-  n  - Next result, forward
-  N  - Next result, backward
+  Searching
+    /  - Forward
+    ?  - Backward
+    *  - Word under cursor - forward  (bounded)
+    g* - Word under cursor - forward  (unbounded)
+    #  - Word under cursor - backward (bounded)
+    g# - Word under cursor - backward (unbounded)
+    n  - Next result, forward
+    N  - Next result, backward
+
+  Advanced:
+    'f' followed by any other character to find its next occurrence
+    '%' to use matching parens to go where you want to go
+     'H', 'M' and 'L' take the cursor directly to the 'H'ighest, 'M'iddle, or 'L'ower line on the screen
+     'zt', 'zz' and 'zb' keep the cursor at the current position, but scroll the view so that it falls at the 't'op, 'z' center, or 'b'ottom of the screen
+    '/' which is effortless to type to search for a string,
+    ']]' and the likes to navigate by functions
+    '*' searches forward for the next occurrence of the word under the cursor ('#' does the same backwards, at symmetrical positions so its easier to remember).
+
+Visual Mode
+    v - start visual mode
+    V - start linewise visual mode
 
 Picking up the brush
   ESC
   Ctrl+[
+
 
 
 Advanced
