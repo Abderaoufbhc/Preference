@@ -29,7 +29,7 @@
   - Text Editor
     - Atom, Brackets, Sublime
   - Utility
-    - Hex Fiend, FileZilla, Reflector, Skitch, TeamViewer, SourceTree(From website), Latern
+    - Hex Fiend, FileZilla, Reflector, Skitch, TeamViewer, SourceTree(From website) - DiffMerge, Latern
     - Mac Specific
       - Flycut, Free Ruler 1.7b5, Go2Shell(From Website), InVisible
 
