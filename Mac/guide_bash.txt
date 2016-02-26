@@ -5,3 +5,11 @@ To-read
 		https://bbs.archlinux.org/viewtopic.php?id=51818
 	3. Basic tutorial
 		https://www.digitalocean.com/community/tutorials/how-to-customize-your-bash-prompt-on-a-linux-vps
+
+
+Useful commands:
+
+time
+watch
+date
+crontab

@@ -43,6 +43,9 @@
   - Others
     - Steam, Popcorn-Time, Skype, VLC, WeChat, 搜狐影音, 有道词典, 爱奇艺视频
 
+#### Command Line Utilities
+  - brew install watch
+
 ---
 
 ### Terminal/iTerm2

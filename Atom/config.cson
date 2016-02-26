@@ -1,0 +1,19 @@
+"*":
+  core:
+    themes: [
+      "seti-ui"
+      "monokai"
+    ]
+  editor:
+    fontSize: 12
+    invisibles: {}
+    lineHeight: 1.2
+    scrollPastEnd: true
+  "exception-reporting":
+    userId: "3160985d-f38b-d1a4-2f78-6f3d87451c40"
+  "file-icons":
+    forceShow: true
+  linter: {}
+  "merge-conflicts": {}
+  welcome:
+    showOnStartup: false
