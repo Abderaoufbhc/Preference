@@ -1,6 +1,6 @@
 # Mac Setup
 
-### Application:
+## Application:
 
 #### Browser
   - Firefox, Chrome
@@ -39,16 +39,78 @@
   - Music
     - GarageBand, Sibelius 7, Spotify
   - Utility
-    - BitTorrent, Memory Clean
+    - BitTorrent, Clean My Mac 3
   - Others
-    - Steam, Popcorn-Time, Skype, VLC, WeChat, 搜狐影音, 有道词典, 爱奇艺视频
-
-#### Command Line Utilities
-  - brew install watch
+    - Steam, Popcorn-Time, Skype, VLC, MPlayerX, WeChat, 搜狐影音, 有道词典, 爱奇艺视频
 
 ---
 
-### Terminal/iTerm2
+## Languages/Platform & Package Manager
+
+### Apple/Mac
+
+#### Mac Package manager: [Homebrew](http://brew.sh/)
+
+Installation
+```shell
+    $ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+```
+
+Packages to install
+```shell
+    $ brew install watch
+```
+
+#### Swift & Objective-C dependency manager: [CocoaPods](https://cocoapods.org/)
+
+Installation
+```shell
+    $ sudo gem install cocoapods
+```
+
+#### Swift & Objective-C dependency manager: [Carthage](https://github.com/Carthage/Carthage)
+
+
+### Javascript/Node.js
+
+#### [Node.js](https://nodejs.org)
+
+#### Node version control: nvm
+
+#### Package Manager: bower
+
+#### Package Manager: [npm](https://www.npmjs.com/)
+
+- Come with Node.js [installation](https://nodejs.org/download/)
+- npm global
+  - Binary Path: usr/local/bin
+  - Src Path: usr/local/lib/node_modules
+  - Install items:
+```shell
+    sudo npm install -g bower csslint codeclimate-test-reporter eslint express generator-gulp-angular generator-gulp-webapp gulp istanbul jasmine-node karma learnyounode mean-cli npm-check-updates node-inspector nodemon plato yo
+```
+
+
+#### Python package manager: gem?
+
+### PHP
+
+#### PHP package manager: Autoload?
+
+#### PHP package manager: [pear](https://pear.php.net)
+
+System-wide installation [tutorial](https://pear.php.net/manual/en/installation.getting.php)
+```shell
+    $ curl -O  http://pear.php.net/go-pear.phar
+    $ sudo php -d detect_unicode=0 go-pear.phar
+```
+
+---
+
+## Command Line
+
+#### Terminal/iTerm2
+
   - Scheme: Ta-Da (Default)
   - Font: Fira Mono Medium for Powerline 11 pt for "Regular" and "Non-ASCII"
   - Window Size: Column 120 - Row 40/50
@@ -58,17 +120,35 @@
       - Pastel Black: Window (0x2D2D2D Patel black); Text (0xFFFFFF White)
   - iTerm2
     - Keys: Hotkey: system-wide: Cmd+i
-    - Profile: Ta-Da, Hotkey Window
+    - Profile
+      - List: Ta-Da, Hotkey Window
+    - Terminal
+      - Scrollback Lines: 100,000
+
+#### Utility
+
+  - wget: No wget on Mac. Use curl instead
 
 ---
 
+## Quick Look Plugin
+  - Enhancement
+    - [quick-look-plugins](https://github.com/sindresorhus/quick-look-plugins)
+    - [Debug Provisioning File](https://github.com/futurice/ios-good-practices#debugging-provisioning): [Provisioning](https://github.com/chockenberry/Provisioning)
+
+---
+
+## IDE
+
 ### Xcode:
-  - Package
-    - Spark Inspector
+
+  - Package Manager
     - Alcatraz:
       - Themes: Ciapre
       - Plugins: Auto-Importer, Backlight, BBUDebuggerTuckAway, BBUFullIssueNavigator, ClangFormat, CocoaPods, DerivedData Exterminator, FuzzyAutocomplete, GitDiff, KSImageNamed, OMColorSense, RTImageAssets, SCXcodeMinimap, SCXcodeSwitchExpander, ShowInGithub, VVDocumenter-Xcode, XAlign, XcodeColors, XToDo, XVim
       - Source: http://nshipster.com/xcode-plugins/
+  - Inspector
+    - Spark Inspector. (Paid)
   - Preference:
     - Behaviors:
       - Sound: Starts - Blow; Issue - Tink; Succeeds - Submarine; Fails - Purr
@@ -77,15 +157,13 @@
       - Indentation: Indent all with 2 spaces. Tab width: 2. Indent wrapped lines by 2 spaces
       - Downloads: download everything
 
----
+## Eclipse:
 
-### Eclipse:
-Installation Guide
+- Installation Guide
   - Download most recent Java SE JDK (Java Development Kit) from Oracle’s website. Something like “Java SE Development Kit 8u51”. NOT Java website
   - Download and install JRE (Java Runtime Environment) from Java website
   - Download and install Eclipse from Eclipse website
-
-Preference
+- Preference
   - General
     - Keys
       - Run/Debug - Cmd+R
@@ -95,23 +173,9 @@ Preference
 
 ---
 
-### Node.js
-Install with nvm. Follow github instruction
+## Preferences
 
-npm global
-  - Binary Path: usr/local/bin
-  - Src Path: usr/local/lib/node_modules
-  - Command:
-
-```bash
-    sudo npm install -g bower csslint codeclimate-test-reporter eslint express generator-gulp-angular generator-gulp-webapp gulp istanbul jasmine-node karma learnyounode mean-cli npm-check-updates node-inspector nodemon plato yo
-```
-
----
-
-### For Mac
-
-System Preferences
+- System Preferences
   - Security & Privacy
     - General: Show a message when the screen is locked
     - Allow apps downloaded from: Anywhere
@@ -126,7 +190,7 @@ System Preferences
     - Show date
     - Time Zone: Set time zone automatically
   - Users & Groups
-    - Login Items: Flycut, Memory Clean, iTerm2
+    - Login Items: Flycut, iTerm2
     - Login Options: Show fast user switching menu as “Full Name”
   - Internet Accounts:
     - iCloud: Turn on all
@@ -134,25 +198,32 @@ System Preferences
     - Battery:
     - Power Adapter: Computer sleep - Never; Display sleep - 2
 
-Finder
+- Finder
   - View: Show Tab Bar, Path Bar, Status Bar
   - Sort by Type
 
-Docker:
+- Docker:
   - Position: Left
   - Items: Finder, Chrome, Safari, Calendar, Notes, Sublime, SourceTree, YouDao, Terminal
 
-Calendar
+- Calendar
   - General: Show “18” hours at a time, Deafult Calendar: Apollo
   - Advanced: Turn on timezone support
 
-Chrome Setting:
+- Chrome Setting:
   - Sign In: Advanced Sync Settings: Sync Everything
 
-Flycut
+- Flycut
   - Shortcut: Alt+Cmd+V
 
-MAMP PRO
+- SourceTree
+  - General
+    - Always display full console output
+    - Confirm switching ranches when working copy is clean
+  - Git
+    - Do not fast-forward when merging, always create commit
+
+- MAMP PRO
   - [Yosemite fix](http://stackoverflow.com/questions/11771105/apache-server-wont-start-in-mamp): change a file name
   - xip.io [allows non-local device](http://simianstudios.com/blog/post/xip.io-mamp-pro-super-easy-local-network-testing) to access the pages:
     - Without xip: ```http://chai:8888/PS2/ssotest.php```
@@ -160,5 +231,5 @@ MAMP PRO
 
 ---
 
-To-Read
-iOS network debug: ```https://wiki.appcelerator.org/display/guides2/Native+iOS+Debugging+and+Testing+Tools```
+## To-Read
+- iOS network debug: `https://wiki.appcelerator.org/display/guides2/Native+iOS+Debugging+and+Testing+Tools`
