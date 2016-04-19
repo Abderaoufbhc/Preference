@@ -1,11 +1,30 @@
 "*":
   core:
+    customFileTypes:
+      "source.ini": [
+        ".buckconfig"
+        ".flowconfig"
+      ]
+      "source.json": [
+        ".arcconfig"
+        "BUCK.autodeps"
+      ]
+      "source.python": [
+        "BUCK"
+      ]
     disabledPackages: [
       "emmet"
+      "vim-mode"
+      "tree-view"
+      "git-plus"
+      "highlight-selected"
+      "project-manager"
+      "atom-beautify"
+      "set-syntax"
     ]
     themes: [
       "atom-dark-ui"
-      "monokai"
+      "gruvbox-syntax"
     ]
   editor:
     fontSize: 12
@@ -18,8 +37,57 @@
     userId: "3160985d-f38b-d1a4-2f78-6f3d87451c40"
   "file-icons":
     forceShow: true
+  "file-watcher":
+    promptWhenFileHasChangedOnDisk: false
+  "git-plus": {}
+  "highlight-selected": {}
   linter: {}
   "merge-conflicts": {}
+  minimap:
+    absoluteMode: true
+  nuclide:
+    installRecommendedPackages: true
+    "nuclide-adb-logcat": {}
+    "nuclide-arcanist": {}
+    "nuclide-buck-files": {}
+    "nuclide-clang-atom": {}
+    "nuclide-console": {}
+    "nuclide-datatip": {}
+    "nuclide-debugger-hhvm": {}
+    "nuclide-flow": {}
+    "nuclide-format-js": {}
+    "nuclide-hack": {}
+    "nuclide-health": {}
+    "nuclide-home":
+      showHome: false
+    "nuclide-ios-simulator-logs": {}
+    "nuclide-ocaml": {}
+    "nuclide-python": {}
+    "nuclide-react-native": {}
+    "nuclide-working-sets":
+      workingSets: [
+        {
+          name: "FanCard"
+          active: false
+          uris: [
+            "/Users/compass/Code/FanCard"
+          ]
+        }
+        {
+          name: "My Stuff"
+          active: false
+          uris: [
+            "/Users/compass/Code/DBDCapital"
+            "/Users/compass/Code/GoldenCompass"
+            "/Users/compass/Code/GoldenCompass-Old"
+            "/Users/compass/Code/Preference"
+          ]
+        }
+      ]
+  pigments: {}
+  tabs:
+    usePreviewTabs: true
+  "travis-ci-status": {}
   welcome:
     showOnStartup: false
   whitespace: {}

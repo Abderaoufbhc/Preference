@@ -168,8 +168,14 @@ System-wide installation [tutorial](https://pear.php.net/manual/en/installation.
     - Keys
       - Run/Debug - Cmd+R
       - Run JUnit Test - Cmd+U (Take out conflict: “Evaluate selected text”)
-      - Content Assit: Option+Space
+      - Content Assit: Ctrl+Space
       - Console: buffer size: 2,147,383,647
+    - Editors
+      - Text Editors: Displayed tab width: 2, Insert spaces for tabs
+  - Java
+    - Code Style - Formatter - New - Indentation - Tab policy, Indentation size. Tab size
+      - https://alextheedom.wordpress.com/code-and-stuff/how-do-i-change-eclipse-to-use-spaces-instead-of-tabs/
+      - Editor --> Content Assist --> Advanced. Make sure -Java Proposals is ticked
 
 ---
 
