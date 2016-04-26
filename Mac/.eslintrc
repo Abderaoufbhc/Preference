@@ -1,20 +1,22 @@
 {
-    "rules": {
-        "indent": [2, 2, {"SwitchCase": 1}],
-        "quotes": [2, "single"],
-        "linebreak-style": [2, "unix"],
-        "semi": [2, "always"],
-        "no-console": [0],
-        "comma-dangle": [2, "always-multiline"],
-        "no-unused-vars": [2, {"vars": "all", "args": "none"}]
-    },
-    "env": {
-        "node": true,
-        "browser": true,
-        "jquery": true,
-        "jasmine": true,
-    },
-    "extends": "eslint:recommended"
+  "extends": "eslint:recommended",
+  "env": {
+    "node": true,
+    "browser": true,
+    "jquery": true,
+    "jasmine": true,
+  },
+  "rules": {
+    "indent": [2, 2, {"SwitchCase": 1}],
+    "quotes": [2, "single"],
+    "linebreak-style": [2, "unix"],
+    "semi": [2, "always"],
+    "no-console": [1],
+    "comma-dangle": [2, "always-multiline"],
+    "no-unused-vars": [2, {"vars": "all", "args": "none"}]
+  }
 }
 
+// Need to update eslint to 2.x version. See updated rules here: http://eslint.org/docs/rules/
 // Reference to reset all: https://gist.github.com/cletusw/e01a85e399ab563b1236
+// Example rc: https://gist.github.com/nkbt/9efd4facb391edbf8048

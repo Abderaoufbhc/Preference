@@ -58,7 +58,8 @@ Installation
 
 Packages to install
 ```shell
-    $ brew install watch
+    $ brew update
+    $ brew install watch, watchman
 ```
 
 #### Swift & Objective-C dependency manager: [CocoaPods](https://cocoapods.org/)
@@ -87,7 +88,7 @@ Installation
   - Src Path: usr/local/lib/node_modules
   - Install items:
 ```shell
-    sudo npm install -g bower csslint codeclimate-test-reporter eslint express generator-gulp-angular generator-gulp-webapp gulp istanbul jasmine-node karma learnyounode mean-cli npm-check-updates node-inspector nodemon plato yo
+    sudo npm install -g bower csslint codeclimate-test-reporter eslint express generator-gulp-angular generator-gulp-webapp gulp istanbul jasmine-node karma learnyounode mean-cli npm-check-updates node-inspector nodemon plato webpack yo
 ```
 
 

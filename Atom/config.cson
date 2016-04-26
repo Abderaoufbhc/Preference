@@ -12,19 +12,22 @@
       "source.python": [
         "BUCK"
       ]
+      "text.html.php": [
+        "php"
+      ]
     disabledPackages: [
       "emmet"
-      "vim-mode"
       "tree-view"
       "git-plus"
-      "highlight-selected"
       "project-manager"
       "atom-beautify"
       "set-syntax"
+      "linter-markdown"
+      "linter"
     ]
     themes: [
       "atom-dark-ui"
-      "gruvbox-syntax"
+      "firewatch-syntax"
     ]
   editor:
     fontSize: 12
@@ -37,14 +40,22 @@
     userId: "3160985d-f38b-d1a4-2f78-6f3d87451c40"
   "file-icons":
     forceShow: true
+  "file-types":
+    php: "code.php"
   "file-watcher":
     promptWhenFileHasChangedOnDisk: false
   "git-plus": {}
   "highlight-selected": {}
   linter: {}
+  "linter-eslint":
+    disableWhenNoEslintConfig: false
+  "linter-php":
+    executablePath: "/usr/bin/php"
   "merge-conflicts": {}
   minimap:
-    absoluteMode: true
+    plugins:
+      linter: true
+      linterDecorationsZIndex: 0
   nuclide:
     installRecommendedPackages: true
     "nuclide-adb-logcat": {}
@@ -68,7 +79,7 @@
       workingSets: [
         {
           name: "FanCard"
-          active: false
+          active: true
           uris: [
             "/Users/compass/Code/FanCard"
           ]
@@ -87,6 +98,10 @@
   pigments: {}
   tabs:
     usePreviewTabs: true
+  "tool-bar":
+    fullWidth: false
+    iconSize: "16px"
+    position: "Left"
   "travis-ci-status": {}
   welcome:
     showOnStartup: false
