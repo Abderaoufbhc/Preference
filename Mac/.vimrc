@@ -16,7 +16,8 @@ Plugin 'altercation/vim-colors-solarized'   " Color theme
 Plugin 'tpope/vim-fugitive'                 " plugin on Git wrapper
 Plugin 'scrooloose/nerdtree'                " A tree explorer plugin
 Plugin 'Lokaltog/vim-easymotion'            " Vim motions on speed
-Plugin 'bling/vim-airline'                  " lean & mean status/tabline for vim that's light as air
+Plugin 'vim-airline/vim-airline'            " lean & mean status/tabline for vim that's light as air
+Plugin 'vim-airline/vim-airline-themes'     " airline theme
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
