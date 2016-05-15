@@ -1,24 +1,49 @@
+set nocompatible              " be iMproved, required
+filetype off                  " required
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
+
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+
+" All other plugins
+Plugin 'altercation/vim-colors-solarized'   " Color theme
+
+Plugin 'tpope/vim-fugitive'                 " plugin on Git wrapper
+Plugin 'scrooloose/nerdtree'                " A tree explorer plugin
+Plugin 'Lokaltog/vim-easymotion'            " Vim motions on speed
+Plugin 'bling/vim-airline'                  " lean & mean status/tabline for vim that's light as air
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+" To ignore plugin indent changes, instead use:
+"filetype plugin on
+"
+" Brief help
+" :PluginList       - lists configured plugins
+" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
+" :PluginSearch foo - searches for foo; append `!` to refresh local cache
+" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
+"
+" see :h vundle for more details or wiki for FAQ
+" Put your non-Plugin stuff after this line
+
+
 " Leader setting
 let mapleader = ","
 
-" Vundle settings. Run :BundleInstall to update
-set nocompatible
-filetype off    " Required
-
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-
-Bundle 'gmarik/vundle'   
-
-Bundle 'altercation/vim-colors-solarized'
-" Some settings to enable the theme:
-set number        " Show line numbers
-syntax enable     " Use syntax highlighting
+" Solarized theme setting
+syntax enable
 set background=dark
 let g:solarized_termcolors = 256
 colorscheme solarized
 
-Bundle 'scrooloose/nerdtree'
+" NerdThree
 let NERDTreeMinimalUI=1
 let NERDTreeDirArrows=1
 nmap <leader>m :NERDTreeToggle<CR>  " Toggle NERDTree
@@ -28,11 +53,10 @@ autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 " Close vim if the only window left open is a NERDTree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
-
-Bundle 'Lokaltog/vim-easymotion'
+" Easy Motion
 map <Leader> <Plug>(easymotion-prefix)
 
-"Bundle 'lokaltog/vim-powerline'
+"Plugin 'lokaltog/vim-powerline'
 "set encoding=utf-8 " Necessary to show Unicode glyphs
 "let g:Powerline_symbols = 'fancy'
 "set rtp+=/Users/nate/Library/Python/2.7/lib/python/site-packages/powerline/bindings/vim
@@ -40,23 +64,19 @@ map <Leader> <Plug>(easymotion-prefix)
 " For powerline font in MacVim
 "set guifont=Menlo\ For\ Powerline
 
-Bundle 'bling/vim-airline'
+" Air-line
 let g:airline_powerline_fonts=1
 set t_Co=256
 set laststatus=2
 set fillchars+=stl:\ ,stlnc:\
 let g:airline_theme             = 'powerlineish'
-let g:airline#extensions#branch#enabled = 1                                                                                         
+let g:airline#extensions#branch#enabled = 1
 let g:airline#extensions#syntastic#enabled = 1
 
-Bundle 'tpope/vim-fugitive'
 
-
-
-
-
-filetype plugin indent on " Required
-
+" Editor display settings
+filetype plugin indent on   " Required
+set number                  " Show line numbers
 set cursorline              " Light highlight of the line with cursor
 set expandtab               " Turn tab into space
 set modelines=0             " Number of line (at the beginning and end of each file) vim checks for initializations
