@@ -1,0 +1,80 @@
+# ~/.tarc
+# TripAdvisor specific
+
+# Login
+alias ssh_box='ssh yfang-box.dhcp.tripadvisor.com'
+alias ssh_sled='ssh yfang-dev.nw.dev.tripadvisor.com'
+
+# Aliases
+alias main='cd /home/site/trsrc-MAINLINE; f;'
+alias branch='cd /home/site/trsrc-branch; f;'
+
+alias logs='cd /etc/httpd-MAINLINE/logs'
+alias lan='cd /home/site/tr-langs'
+alias f='findtrtop'
+alias dev='ssh sbandal@sbandal.dhcp.tripadvisor.com'
+alias s='dev'
+alias data='cd /data/site/tr-data/'
+alias prod='cd /data/site/trsrc-PRODUCTION'
+alias pre='cd /data/site/trsrc-PRERELEASE'
+
+# JRebel
+alias jrebel_tr='$TRTOP/scripts/jrebel-compile.bash tr' # only compile the tr classes and no jar/dependencies
+# update opf
+alias opf_update='$TRTOP/opf/less.sh && $TRTOP/scripts/tweak flush opf'
+# Server bounce
+alias server_bounce='$TRTOP/configure mainline && $TRTOP/gradlew assemble && $TRTOP/scripts/tabuild -rdf'
+alias server_cleanAndBounce='$TRTOP/gradlew clean && server_bounce'
+
+# SVN aliases
+alias sup='svntr up'
+alias sd='svn diff'
+alias ss='svntr st'
+
+
+# Environment Variables
+fullHostName=`hostname -f`
+if [ -f ~/.tarc ] && [[ $fullHostName == *yfang-mac* ]]; then
+  # TA work laptop - Mac OS
+  export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_92.jdk/Contents/Home
+  export PATH=$JAVA_HOME/bin:$PATH
+  export TRTOP=/Users/yfang/trsrc-MAINLINE
+elif [ -f ~/.tarc ] && [[ $fullHostName == *.tripadvisor.com ]]; then
+  # TA Dev box/sled
+  export JAVA_HOME=/usr/jdk1.8
+  export ANT_HOME=/usr/local/ant
+  export TRTOP=/home/site/trsrc-MAINLINE
+
+  # Server CentOS 6
+  # export JAVA_HOME=/usr/jdk1.8
+  # export GRADLE_OPTS="-Dorg.gradle.daemon=true -Dorg.gradle.parallel=true"
+  # export PRTOP=/home/site/platform-reporting
+  # export TOMCAT=/usr/local/tomcat7
+fi
+
+# Helper functions
+function findtrtop {
+  candidate=`pwd`
+  while true; do
+  if [[ -e "$candidate/GNUmaster" &&  -e "$candidate/tr" && -e "$candidate/Crawlers" ]]; then
+    trtop $candidate
+    break;
+  else
+    nextcandidate=${candidate%/*}
+    if [[ "v$nextcandidate" == "v$candidate" || "v$nextcandidate" == "v" ]]; then
+    break;
+    fi
+    candidate=$nextcandidate;
+    fi
+  done
+}
+
+function trtop {
+  if (( $# == 1 )); then
+  oldscripts=$TRTOP/scripts
+  export TRTOP=$1
+  export PATH=${PATH//:$oldscripts}:$TRTOP/scripts
+  else
+  echo $TRTOP
+  fi
+}

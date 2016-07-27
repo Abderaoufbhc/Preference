@@ -31,7 +31,7 @@
   - Utility
     - Hex Fiend, FileZilla, Reflector, Skitch, TeamViewer, SourceTree(From website) - DiffMerge, Latern
     - Mac Specific
-      - Flycut, Free Ruler 1.7b5, Go2Shell(From Website), InVisible
+      - Flycut, Free Ruler 1.7b5, Go2Shell(From Website), InVisible, SizeUp
 
 #### Others
   - Office
@@ -122,10 +122,12 @@ System-wide installation [tutorial](https://pear.php.net/manual/en/installation.
   - iTerm2
     - Keys: Hotkey: system-wide: Cmd+i
     - Profile
-      - List: Ta-Da, Hotkey Window
-    - Terminal
-      - Scrollback Lines: 100,000
-
+      - Ta-Da
+        - Terminal
+          - Scrollback Lines: 100,000
+    - Keys
+      - Hotkey - Show/hide iTerm2 & Hotkey toggles
+      - Profile: Hotkey Window
 #### Utility
 
   - wget: No wget on Mac. Use curl instead
