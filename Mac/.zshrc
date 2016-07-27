@@ -150,3 +150,9 @@ if [ -f ~/.tarc ];
 then
     source ~/.tarc
 fi
+
+# Go to TRTOP if on dev servers
+fullHostName=`hostname -f`
+if [[ $fullHostName == *.tripadvisor.com ]]; then
+  cd $TRTOP
+fi
