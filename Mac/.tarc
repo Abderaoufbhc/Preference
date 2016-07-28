@@ -6,12 +6,11 @@ alias ssh_box='ssh yfang-box.dhcp.tripadvisor.com'
 alias ssh_sled='ssh yfang-dev.nw.dev.tripadvisor.com'
 
 # Aliases
-alias main='cd /home/site/trsrc-MAINLINE; f;'
-alias branch='cd /home/site/trsrc-branch; f;'
-
+alias f='findtrtop'
+alias main='f; cd $TRTOP'
+alias branch='f; cd $TRTOP'
 alias logs='cd /etc/httpd-MAINLINE/logs'
 alias lan='cd /home/site/tr-langs'
-alias f='findtrtop'
 alias dev='ssh sbandal@sbandal.dhcp.tripadvisor.com'
 alias s='dev'
 alias data='cd /data/site/tr-data/'
@@ -22,6 +21,11 @@ alias pre='cd /data/site/trsrc-PRERELEASE'
 alias jrebel_tr='$TRTOP/scripts/jrebel-compile.bash tr' # only compile the tr classes and no jar/dependencies
 # update opf
 alias opf_update='$TRTOP/opf/less.sh && $TRTOP/scripts/tweak flush opf'
+# update css
+alias css_disable_compress='$TRTOP/scripts/tweak feature off css_compress; $TRTOP/scripts/tweak feature off css_concat'
+alias css_build='$TRTOP/gradlew site:css2:assemble'
+alias css_flush='$TRTOP/scripts/tweak flush css2'
+
 # Server bounce
 alias server_bounce='$TRTOP/configure mainline && $TRTOP/gradlew assemble && $TRTOP/scripts/tabuild -rdf'
 alias server_cleanAndBounce='$TRTOP/gradlew clean && server_bounce'
@@ -55,26 +59,33 @@ fi
 # Helper functions
 function findtrtop {
   candidate=`pwd`
+  foundNewTRTOP=false
+
   while true; do
-  if [[ -e "$candidate/GNUmaster" &&  -e "$candidate/tr" && -e "$candidate/Crawlers" ]]; then
-    trtop $candidate
-    break;
-  else
-    nextcandidate=${candidate%/*}
-    if [[ "v$nextcandidate" == "v$candidate" || "v$nextcandidate" == "v" ]]; then
-    break;
-    fi
-    candidate=$nextcandidate;
+    if [[ -e "$candidate/GNUmaster" &&  -e "$candidate/tr" && -e "$candidate/Crawlers" ]]; then
+      trtop $candidate
+      foundNewTRTOP=true
+      break;
+    else
+      nextcandidate=${candidate%/*}
+      if [[ "v$nextcandidate" == "v$candidate" || "v$nextcandidate" == "v" ]]; then
+        break;
+      fi
+      candidate=$nextcandidate;
     fi
   done
+
+  if $foundNewTRTOP; then
+    echo "\$TRTOP is now => $TRTOP"
+  else
+    echo "No new \$TRTOP"
+  fi
 }
 
 function trtop {
   if (( $# == 1 )); then
-  oldscripts=$TRTOP/scripts
-  export TRTOP=$1
-  export PATH=${PATH//:$oldscripts}:$TRTOP/scripts
-  else
-  echo $TRTOP
+    oldscripts=$TRTOP/scripts
+    export TRTOP=$1
+    export PATH=${PATH//:$oldscripts}:$TRTOP/scripts
   fi
 }
