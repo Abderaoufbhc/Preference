@@ -1,4 +1,4 @@
-rsync -u --progress .zshrc ~/.zshrc
-rsync -u --progress .tarc ~/.tarc
-rsync -u --progress .vimrc ~/.vimrc
-rsync -u --progress .gitconfig ~/.gitconfig
+curl https://raw.githubusercontent.com/yinanfang/Preference/master/Mac/.zshrc > ~/.zshrc
+curl https://raw.githubusercontent.com/yinanfang/Preference/master/Mac/.tarc > ~/.tarc
+curl https://raw.githubusercontent.com/yinanfang/Preference/master/Mac/.vimrc > ~/.vimrc
+curl https://raw.githubusercontent.com/yinanfang/Preference/master/Mac/.gitconfig > ~/.gitconfig
