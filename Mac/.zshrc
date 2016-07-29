@@ -137,9 +137,6 @@ alias v='/usr/bin/vim'
 # zsh specific
 alias sc='source ~/.zshrc'
 
-# zsh specific
-alias sc='source ~/.zshrc'
-
 # git specific
 alias gst='git status'
 alias gl='git pull'
