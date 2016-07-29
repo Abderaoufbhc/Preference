@@ -3,3 +3,10 @@
 	name = Lucas Fang
 [push]
 	default = simple
+[alias]
+  st = status
+  ci = commit -v
+  co = checkout
+  br = branch
+  unstage = reset HEAD --
+  last = log -1 HEAD
