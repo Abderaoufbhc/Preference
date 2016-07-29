@@ -1,0 +1,9 @@
+# Vim
+
+Quick installation guide and tutorial about vim
+
+## Quick Installation:
+```shell
+    $ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+    $ curl https://raw.githubusercontent.com/yinanfang/Preference/master/Mac/.zshrc -o ~/.zshrc
+```
