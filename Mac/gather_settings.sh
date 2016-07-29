@@ -1,3 +1,4 @@
-rsync -u --progress ~/.zshrc .zshrc
-rsync -u --progress ~/.tarc .tarc
-rsync -u --progress ~/.vimrc .vimrc
+rsync -u --progress ~/.zshrc .
+rsync -u --progress ~/.tarc .
+rsync -u --progress ~/.vimrc .
+rsync -u --progress ~/.gitconfig .
