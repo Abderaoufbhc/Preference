@@ -88,7 +88,6 @@ set ttyscroll=10            " Turn off scrolling
 set encoding=utf-8
 set tabstop=2               " Tab size 2
 set nowrap                  " Don't wrap lines
-set number
 set nowritebackup           " No *.txt~ file to prevent jumping files
 set noswapfile              " No swap file
 set nobackup

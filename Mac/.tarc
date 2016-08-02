@@ -54,6 +54,9 @@ elif [ -f ~/.tarc ] && [[ $fullHostName == *.tripadvisor.com ]]; then
   # export GRADLE_OPTS="-Dorg.gradle.daemon=true -Dorg.gradle.parallel=true"
   # export PRTOP=/home/site/platform-reporting
   # export TOMCAT=/usr/local/tomcat7
+
+  # Forward ssh agent for tmux
+  export SSH_AUTH_SOCK=0
 fi
 
 # Helper functions
