@@ -87,6 +87,11 @@ Installation
   - Binary Path: usr/local/bin
   - Src Path: usr/local/lib/node_modules
   - Install items:
+
+Installation:
+- Install with (official script)[https://github.com/creationix/nvm#install-script]
+－ `nvm ls` to check current node
+－ `nvm install x.x` to install the latest node
 ```shell
     sudo npm install -g bower csslint codeclimate-test-reporter eslint express generator-gulp-angular generator-gulp-webapp gulp istanbul jasmine-node karma learnyounode mean-cli npm-check-updates node-inspector nodemon plato webpack yo
 ```

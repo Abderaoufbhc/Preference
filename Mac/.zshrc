@@ -79,7 +79,7 @@ fi
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-export NVM_DIR="/Users/compass/.nvm"
+export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
@@ -155,6 +155,7 @@ alias glog='git log'
 alias glogp='git log --pretty=format:"%h %s" --graph'
 
 # history | awk '{CMD[$2]++;count++;}END { for (a in CMD)print CMD[a] " " CMD[a]/count*100 "% " a;}' | grep -v "./" | column -c3 -s " " -t | sort -nr | nl |  head -n10
+# alias fip = 'ifconfig | grep -Eo \'inet (addr:)?([0-9]*\.){3}[0-9]*\' | grep -Eo \'([0-9]*\.){3}[0-9]*\' | grep -vE \'(127.0.0.1|172.17.*|192.168.*)\''
 
 # if user is not root, pass all commands via sudo #
 if [ $UID -ne 0 ]; then
