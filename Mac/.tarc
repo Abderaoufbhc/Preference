@@ -34,7 +34,7 @@ alias server_cleanAndBounce='$TRTOP/gradlew clean && server_bounce'
 alias sup='svntr up'
 alias sd='svn diff'
 alias ss='svntr st'
-
+alias spatch='patch -p0 -i'
 
 # Environment Variables
 fullHostName=`hostname -f`
