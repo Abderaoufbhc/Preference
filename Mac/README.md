@@ -37,9 +37,9 @@
   - Office
     - Microsoft Excel/OneNote/Word
   - Music
-    - GarageBand, Sibelius 7, Spotify
+    - GarageBand, Sibelius 7, Spotify, Virtual MIDI Piano Keyboard (Sourceforge)
   - Utility
-    - BitTorrent, Clean My Mac 3
+    - BitTorrent, Clean My Mac 3, The Unarchiver
   - Others
     - Steam, Popcorn-Time, Skype, VLC, MPlayerX, WeChat, 搜狐影音, 有道词典, 爱奇艺视频
 
@@ -88,8 +88,10 @@ Installation
   - Src Path: usr/local/lib/node_modules
   - Install items:
 ```shell
-    sudo npm install -g bower csslint codeclimate-test-reporter eslint express generator-gulp-angular generator-gulp-webapp gulp istanbul jasmine-node karma learnyounode mean-cli npm-check-updates node-inspector nodemon plato webpack yo
+    sudo npm install -g babel-cli bower csslint codeclimate-test-reporter eslint flow-bin gulp istanbul jasmine-node karma npm-check-updates node-inspector nodemon plato pm2 webpack
 ```
+  - Non-global item: express
+  - Unused items: generator-gulp-angular generator-gulp-webapp, learnyounode mean-cli yo
 
 
 #### Python package manager: gem?
@@ -123,6 +125,7 @@ System-wide installation [tutorial](https://pear.php.net/manual/en/installation.
     - Keys: Hotkey: system-wide: Cmd+i
     - Profile
       - List: Ta-Da, Hotkey Window
+      - Window: Transparency: ~70%
     - Terminal
       - Scrollback Lines: 100,000
 
