@@ -31,7 +31,7 @@
   - Utility
     - Hex Fiend, FileZilla, Reflector, Skitch, TeamViewer, SourceTree(From website) - DiffMerge, Latern
     - Mac Specific
-      - Flycut, Free Ruler 1.7b5, Go2Shell(From Website), InVisible
+      - Flycut, Free Ruler 1.7b5, Go2Shell(From Website), InVisible, SizeUp
 
 #### Others
   - Office
@@ -87,6 +87,11 @@ Installation
   - Binary Path: usr/local/bin
   - Src Path: usr/local/lib/node_modules
   - Install items:
+
+Installation:
+- Install with (official script)[https://github.com/creationix/nvm#install-script]
+－ `nvm ls` to check current node
+－ `nvm install x.x` to install the latest node
 ```shell
     sudo npm install -g babel-cli bower csslint codeclimate-test-reporter eslint flow-bin gulp istanbul jasmine-node karma npm-check-updates node-inspector nodemon plato pm2 webpack
 ```
@@ -126,8 +131,9 @@ System-wide installation [tutorial](https://pear.php.net/manual/en/installation.
     - Profile
       - List: Ta-Da, Hotkey Window
       - Window: Transparency: ~70%
-    - Terminal
-      - Scrollback Lines: 100,000
+      - Terminal: Scrollback Lines: 100,000
+    - Keys
+      - Hotkey - Show/hide iTerm2 & Hotkey toggles
 
 #### Utility
 

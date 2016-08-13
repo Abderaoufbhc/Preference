@@ -1,0 +1,94 @@
+# ~/.tarc
+# TripAdvisor specific
+
+# Login
+alias ssh_box='ssh yfang-box.dhcp.tripadvisor.com'
+alias ssh_sled='ssh yfang-dev.nw.dev.tripadvisor.com'
+
+# Aliases
+alias f='findtrtop'
+alias main='f; cd $TRTOP'
+alias branch='f; cd $TRTOP'
+alias logs='cd /etc/httpd-MAINLINE/logs'
+alias lan='cd /home/site/tr-langs'
+alias dev='ssh sbandal@sbandal.dhcp.tripadvisor.com'
+alias s='dev'
+alias data='cd /data/site/tr-data/'
+alias prod='cd /data/site/trsrc-PRODUCTION'
+alias pre='cd /data/site/trsrc-PRERELEASE'
+
+# JRebel
+alias jrebel_tr='$TRTOP/scripts/jrebel-compile.bash tr' # only compile the tr classes and no jar/dependencies
+# update opf
+alias opf_update='$TRTOP/opf/less.sh && $TRTOP/scripts/tweak flush opf'
+# update css
+alias css_disable_compress='$TRTOP/scripts/tweak feature off css_compress; $TRTOP/scripts/tweak feature off css_concat'
+alias css_build='$TRTOP/gradlew site:css2:assemble'
+alias css_flush='$TRTOP/scripts/tweak flush css2'
+
+# Server bounce
+alias server_bounce='$TRTOP/configure mainline && $TRTOP/gradlew assemble && $TRTOP/scripts/tabuild -rdf'
+alias server_cleanAndBounce='$TRTOP/gradlew clean && server_bounce'
+
+# SVN aliases
+alias sup='svntr up'
+alias sd='svn diff'
+alias ss='svntr st'
+alias spatch='patch -p0 -i'
+
+# Environment Variables
+fullHostName=`hostname -f`
+if [ -f ~/.tarc ] && [[ $fullHostName == *yfang-mac* ]]; then
+  # TA work laptop - Mac OS
+  export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_92.jdk/Contents/Home
+  export PATH=$JAVA_HOME/bin:$PATH
+  export TRTOP=/Users/yfang/trsrc-MAINLINE
+elif [ -f ~/.tarc ] && [[ $fullHostName == *.tripadvisor.com ]]; then
+  # TA Dev box/sled
+  export JAVA_HOME=/usr/jdk1.8
+  export ANT_HOME=/usr/local/ant
+  export TRTOP=/home/site/trsrc-MAINLINE
+
+  # Server CentOS 6
+  # export JAVA_HOME=/usr/jdk1.8
+  # export GRADLE_OPTS="-Dorg.gradle.daemon=true -Dorg.gradle.parallel=true"
+  # export PRTOP=/home/site/platform-reporting
+  # export TOMCAT=/usr/local/tomcat7
+
+  # Forward ssh agent for tmux
+  export SSH_AUTH_SOCK=0
+fi
+
+# Helper functions
+function findtrtop {
+  candidate=`pwd`
+  foundNewTRTOP=false
+
+  while true; do
+    if [[ -e "$candidate/GNUmaster" &&  -e "$candidate/tr" && -e "$candidate/Crawlers" ]]; then
+      trtop $candidate
+      foundNewTRTOP=true
+      break;
+    else
+      nextcandidate=${candidate%/*}
+      if [[ "v$nextcandidate" == "v$candidate" || "v$nextcandidate" == "v" ]]; then
+        break;
+      fi
+      candidate=$nextcandidate;
+    fi
+  done
+
+  if $foundNewTRTOP; then
+    echo "\$TRTOP is now => $TRTOP"
+  else
+    echo "No new \$TRTOP"
+  fi
+}
+
+function trtop {
+  if (( $# == 1 )); then
+    oldscripts=$TRTOP/scripts
+    export TRTOP=$1
+    export PATH=${PATH//:$oldscripts}:$TRTOP/scripts
+  fi
+}

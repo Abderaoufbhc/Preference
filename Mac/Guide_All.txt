@@ -1,0 +1,22 @@
+# Quick Quick for setting up everything
+
+Quick installation guide for all settings
+
+## Try put all of them into 1 script?
+
+## Copy settings
+```shell
+    $ sh -c "$(curl https://raw.githubusercontent.com/yinanfang/Preference/master/Mac/update_local_settings.sh)"
+```
+
+## Set up vim
+```shell
+    $ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+    $ curl https://raw.githubusercontent.com/yinanfang/Preference/master/Mac/.vimrc -o ~/.vimrc
+    $ vim +PluginInstall +qall
+```
+
+## Set up zsh
+```shell
+    $ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+```

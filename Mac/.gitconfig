@@ -1,0 +1,20 @@
+[user]
+	email = yinanfang@gmail.com
+	name = Lucas Fang
+[push]
+	default = simple
+[alias]
+  st = status
+  ci = commit -v
+  co = checkout
+  br = branch
+  unstage = reset HEAD --
+  last = log -1 HEAD
+[core]
+	excludesfile = /Users/yfang/.gitignore_global
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true

@@ -1,13 +1,6 @@
 # Vim
 
-Quick installation guide and tutorial about vim
-
-## Quick Installation:
-```shell
-    $ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-    $ curl https://raw.githubusercontent.com/yinanfang/Preference/master/Mac/.vimrc -o ~/.vimrc
-    $ vim +PluginInstall +qall
-```
+Tutorial about vim
 
 ###### Two extrea steps for Mac patched fonts
 
