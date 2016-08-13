@@ -61,10 +61,8 @@
     "nuclide-adb-logcat": {}
     "nuclide-arcanist": {}
     "nuclide-buck-files": {}
-    "nuclide-clang-atom": {}
     "nuclide-console": {}
     "nuclide-datatip": {}
-    "nuclide-debugger-hhvm": {}
     "nuclide-flow": {}
     "nuclide-format-js": {}
     "nuclide-hack": {}
@@ -78,27 +76,11 @@
     "nuclide-working-sets":
       workingSets: [
         {
-          name: "FanCard"
-          active: false
-          uris: [
-            "/Users/compass/Code/FanCard"
-          ]
-        }
-        {
           name: "DBDCapital"
-          uris: [
-            "/Users/compass/Code/Classes"
-            "/Users/compass/Code/DBD"
-            "/Users/compass/Code/DBDCapital"
-            "/Users/compass/Code/DBDCapital-Android"
-            "/Users/compass/Code/DBDCapital-Node"
-            "/Users/compass/Code/DBDCapital-Server"
-            "/Users/compass/Code/DBDCapital-iOS"
-            "/Users/compass/Code/GoldenCompass"
-            "/Users/compass/Code/GoldenCompass-Old"
-            "/Users/compass/Code/Preference"
-          ]
           active: true
+          uris: [
+            "/Users/yfang/Code/Preference"
+          ]
         }
       ]
   pigments: {}
