@@ -27,8 +27,9 @@ alias css_build='$TRTOP/gradlew site:css2:assemble'
 alias css_flush='$TRTOP/scripts/tweak flush css2'
 
 # Server bounce
-alias server_bounce='$TRTOP/configure mainline && $TRTOP/gradlew assemble && $TRTOP/scripts/tabuild -rdf'
-alias server_cleanAndBounce='$TRTOP/gradlew clean && server_bounce'
+alias taClean='$TRTOP/gradlew clean'
+alias taBounce='$TRTOP/scripts/tabuild -rdf'
+alias taFullConfigureAssembleBounce='$TRTOP/configure mainline && $TRTOP/gradlew assemble && $TRTOP/scripts/tabuild -rdf'
 
 # SVN aliases
 alias sup='svntr up'

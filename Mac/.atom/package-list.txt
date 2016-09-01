@@ -8,7 +8,7 @@ git-plus@5.16.2
 gruvbox-syntax@2.4.1
 haskell-grammar@0.4.0
 highlight-selected@0.11.2
-language-babel@2.32.2
+language-babel@2.33.0
 language-ini@1.16.0
 language-ocaml@1.1.2
 language-swift@0.4.0
@@ -29,7 +29,7 @@ merge-conflicts@1.4.4
 minimap@4.24.7
 minimap-linter@1.1.1
 monokai@0.18.0
-nuclide@0.161.0
+nuclide@0.163.0
 pigments@0.31.2
 pretty-json@1.6.0
 project-manager@2.9.7

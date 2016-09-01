@@ -130,7 +130,7 @@ System-wide installation [tutorial](https://pear.php.net/manual/en/installation.
     - Keys: Hotkey: system-wide: Cmd+i
     - Profile
       - List: Ta-Da, Hotkey Window
-      - Window: Transparency: ~70%
+      - Window: Transparency: ~90%
       - Terminal: Scrollback Lines: 100,000
     - Keys
       - Hotkey - Show/hide iTerm2 & Hotkey toggles

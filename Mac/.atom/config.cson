@@ -63,7 +63,9 @@
     "nuclide-buck-files": {}
     "nuclide-console": {}
     "nuclide-datatip": {}
-    "nuclide-flow": {}
+    "nuclide-flow":
+      enableStructuredTypeHints: true
+      pathToFlow: "/Users/yfang/.nvm/versions/node/v6.3.1/bin/flow"
     "nuclide-format-js": {}
     "nuclide-hack": {}
     "nuclide-health": {}
@@ -76,9 +78,24 @@
     "nuclide-working-sets":
       workingSets: [
         {
-          name: "DBDCapital"
-          active: true
+          name: "TA"
           uris: [
+            "/Users/yfang/Code/Preference"
+            "/Users/yfang/Code/TA"
+            "/Users/yfang/Downloads"
+            "/Users/yfang/tr-data"
+            "/Users/yfang/tr-images"
+            "/Users/yfang/tr-langs"
+            "/Users/yfang/trsrc-MAINLINE"
+            "/Users/yfang/trsrc-branch"
+          ]
+          active: true
+        }
+        {
+          name: "DBDCapital"
+          active: false
+          uris: [
+            "/Users/yfang/Code/DBDCapital"
             "/Users/yfang/Code/Preference"
           ]
         }
