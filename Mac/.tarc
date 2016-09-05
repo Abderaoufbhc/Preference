@@ -20,11 +20,17 @@ alias pre='cd /data/site/trsrc-PRERELEASE'
 # JRebel
 alias jrebel_tr='$TRTOP/scripts/jrebel-compile.bash tr' # only compile the tr classes and no jar/dependencies
 # update opf
+
 alias opf_update='$TRTOP/opf/less.sh && $TRTOP/scripts/tweak flush opf'
+
 # update css
-alias css_disable_compress='$TRTOP/scripts/tweak feature off css_compress; $TRTOP/scripts/tweak feature off css_concat'
-alias css_build='$TRTOP/gradlew site:css2:assemble'
-alias css_flush='$TRTOP/scripts/tweak flush css2'
+alias cssFlush='$TRTOP/scripts/tweak flush css2'
+alias cssBuildFlush='$TRTOP/gradlew site:css2:assemble && cssFlush'
+alias cssDisableCompressConcat='$TRTOP/scripts/tweak feature off css_compress && $TRTOP/scripts/tweak feature off css_concat'
+
+alias jsFlush='$TRTOP/scripts/tweak flush js3'
+alias jsBuildFlush='$TRTOP/gradlew site:js3:assemble && jsFlush'
+alias jsDisableCompressConcat='$TRTOP/scripts/tweak feature off js_compress && $TRTOP/scripts/tweak feature off js_concat'
 
 # Server bounce
 alias taClean='$TRTOP/gradlew clean'
