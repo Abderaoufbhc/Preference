@@ -21,7 +21,7 @@ alias pre='cd /data/site/trsrc-PRERELEASE'
 alias jrebel_tr='$TRTOP/scripts/jrebel-compile.bash tr' # only compile the tr classes and no jar/dependencies
 # update opf
 
-alias opf_update='$TRTOP/opf/less.sh && $TRTOP/scripts/tweak flush opf'
+alias opfUpdate='$TRTOP/opf/less.sh && $TRTOP/scripts/tweak flush opf'
 
 # update css
 alias cssFlush='$TRTOP/scripts/tweak flush css2'
