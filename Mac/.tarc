@@ -2,8 +2,10 @@
 # TripAdvisor specific
 
 # Login
-alias ssh_box='ssh yfang-box.dhcp.tripadvisor.com'
-alias ssh_sled='ssh yfang-dev.nw.dev.tripadvisor.com'
+export hostBox='yfang-box.dhcp.tripadvisor.com'
+alias sshBox='ssh $hostBox'
+export hostSled='yfang-dev.nw.dev.tripadvisor.com'
+alias sshSled='ssh $hostSled'
 
 # Aliases
 alias f='findtrtop'
@@ -21,7 +23,8 @@ alias pre='cd /data/site/trsrc-PRERELEASE'
 alias jrebel_tr='$TRTOP/scripts/jrebel-compile.bash tr' # only compile the tr classes and no jar/dependencies
 # update opf
 
-alias opfUpdate='$TRTOP/opf/less.sh && $TRTOP/scripts/tweak flush opf'
+alias opfUpdate='$TRTOP/gradlew opf:assemble && $TRTOP/scripts/tweak flush opf'
+alias opfUpdate2='$TRTOP/opf/less.sh && $TRTOP/scripts/tweak flush opf'
 
 # update css
 alias cssFlush='$TRTOP/scripts/tweak flush css2'

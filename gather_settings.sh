@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # Format: rsync -u --progress ~/.zshrc ./Mac
 
@@ -7,7 +7,7 @@ echo 'Gathering Shell config...'
 rsync -uq ~/.zshrc ./Mac
 rsync -uq ~/.vimrc ./Mac
 
-if [ -f '~/.tarc' ]; then
+if [ -f ~/.tarc ]; then
   echo 'Gathering TripAdvisor Shell config...'
   rsync -uq ~/.tarc ./Mac
 fi
@@ -17,7 +17,7 @@ echo 'Gathering Git config...'
 rsync -uq ~/.gitconfig ./Mac
 
 # Tmux
-if [ -f '~/.tmux.conf' ]; then
+if [ -f ~/.tmux.conf ]; then
   echo 'Gathering Tmux config...'
   rsync -uq ~/.tmux.conf ./Mac
 fi

@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 curl https://raw.githubusercontent.com/yinanfang/Preference/master/Mac/.zshrc > ~/.zshrc
 curl https://raw.githubusercontent.com/yinanfang/Preference/master/Mac/.vimrc > ~/.vimrc
