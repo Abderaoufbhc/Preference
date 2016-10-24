@@ -6,6 +6,11 @@ export hostBox='yfang-box.dhcp.tripadvisor.com'
 alias sshBox='ssh $hostBox'
 export hostSled='yfang-dev.nw.dev.tripadvisor.com'
 alias sshSled='ssh $hostSled'
+export hostPuzzle='puzzle.nw.dev.tripadvisor.com'
+alias sshPuzzle='ssh root@$hostPuzzle'
+
+# Gradle daemon
+export GRADLE_OPTS="-Dorg.gradle.daemon=true -Dorg.gradle.parallel=true"
 
 # Aliases
 alias f='findtrtop'
@@ -37,12 +42,13 @@ alias jsDisableCompressConcat='$TRTOP/scripts/tweak feature off js_compress && $
 
 # Server bounce
 alias taClean='$TRTOP/gradlew clean'
+alias taConfigureBuild='$TRTOP/configure mainline && $TRTOP/gradlew assemble'
 alias taBounce='$TRTOP/scripts/tabuild -rdf'
-alias taFullConfigureAssembleBounce='$TRTOP/configure mainline && $TRTOP/gradlew assemble && $TRTOP/scripts/tabuild -rdf'
+alias taFullConfigureAssembleBounce='taConfigureBuild && taBounce'
 
 # SVN aliases
 alias sup='svntr up'
-alias sd='svn diff'
+alias sd='svntr diff'
 alias ss='svntr st'
 alias spatch='patch -p0 -i'
 
@@ -101,4 +107,17 @@ function trtop {
     export TRTOP=$1
     export PATH=${PATH//:$oldscripts}:$TRTOP/scripts
   fi
+}
+
+# OPF
+function rm_copy_extension()
+{
+    for file in *;
+    do
+        fname=`basename $file .copy`
+        if [[ "$fname" != "$file" ]]
+        then
+            mv $file $fname;
+        fi
+    done;
 }

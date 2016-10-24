@@ -4,6 +4,7 @@
       "source.ini": [
         ".buckconfig"
         ".flowconfig"
+        ".hgrc"
       ]
       "source.json": [
         ".arcconfig"
@@ -17,14 +18,18 @@
       ]
     disabledPackages: [
       "emmet"
-      "tree-view"
       "git-plus"
       "project-manager"
       "atom-beautify"
       "set-syntax"
       "linter-markdown"
       "linter"
+      "terminal-plus"
+      "tree-view"
     ]
+    excludeVcsIgnoredPaths: false
+    packagesWithKeymapsDisabled: []
+    telemetryConsent: "limited"
     themes: [
       "atom-dark-ui"
       "firewatch-syntax"
@@ -42,17 +47,16 @@
     forceShow: true
   "file-types":
     php: "code.php"
-  "file-watcher":
-    promptWhenFileHasChangedOnDisk: false
+  "git-diff": {}
   "git-plus": {}
   "highlight-selected": {}
   linter: {}
-  "linter-eslint":
-    disableWhenNoEslintConfig: false
+  "linter-eslint": {}
   "linter-php":
     executablePath: "/usr/bin/php"
   "merge-conflicts": {}
   minimap:
+    absoluteMode: true
     plugins:
       linter: true
       linterDecorationsZIndex: 0
@@ -61,8 +65,15 @@
     "nuclide-adb-logcat": {}
     "nuclide-arcanist": {}
     "nuclide-buck-files": {}
+    "nuclide-code-format":
+      formatOnSave: true
     "nuclide-console": {}
     "nuclide-datatip": {}
+    "nuclide-distraction-free-mode":
+      hideFindAndReplace: true
+      hideStatusBar: true
+    "nuclide-file-tree":
+      revealFileOnSwitch: true
     "nuclide-flow":
       enableStructuredTypeHints: true
       pathToFlow: "/Users/yfang/.nvm/versions/node/v6.3.1/bin/flow"
@@ -72,6 +83,7 @@
     "nuclide-home":
       showHome: false
     "nuclide-ios-simulator-logs": {}
+    "nuclide-notifications": {}
     "nuclide-ocaml": {}
     "nuclide-python": {}
     "nuclide-react-native": {}
@@ -79,6 +91,7 @@
       workingSets: [
         {
           name: "TA"
+          active: true
           uris: [
             "/Users/yfang/Code/Preference"
             "/Users/yfang/Code/TA"
@@ -89,18 +102,19 @@
             "/Users/yfang/trsrc-MAINLINE"
             "/Users/yfang/trsrc-branch"
           ]
-          active: true
         }
         {
           name: "DBDCapital"
-          active: false
+          active: true
           uris: [
             "/Users/yfang/Code/DBDCapital"
             "/Users/yfang/Code/Preference"
           ]
         }
       ]
+    use: {}
   pigments: {}
+  "symbols-tree-view": {}
   tabs:
     usePreviewTabs: true
   "tool-bar":
