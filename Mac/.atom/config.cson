@@ -26,8 +26,19 @@
       "linter"
       "terminal-plus"
       "tree-view"
+      "linter-scss-lint"
+      "linter-csslint"
     ]
     excludeVcsIgnoredPaths: false
+    ignoredNames: [
+      ".git"
+      ".hg"
+      ".svn"
+      ".DS_Store"
+      "._*"
+      "Thumbs.db"
+      "node_modules"
+    ]
     packagesWithKeymapsDisabled: []
     telemetryConsent: "limited"
     themes: [
@@ -35,7 +46,7 @@
       "firewatch-syntax"
     ]
   editor:
-    fontSize: 12
+    fontSize: 11
     invisibles: {}
     lineHeight: 1.2
     scrollPastEnd: true
@@ -47,6 +58,8 @@
     forceShow: true
   "file-types":
     php: "code.php"
+  "fuzzy-finder":
+    preserveLastSearch: true
   "git-diff": {}
   "git-plus": {}
   "highlight-selected": {}
@@ -54,9 +67,11 @@
   "linter-eslint": {}
   "linter-php":
     executablePath: "/usr/bin/php"
+  "linter-stylelint":
+    disableWhenNoConfig: false
+    useStandard: true
   "merge-conflicts": {}
   minimap:
-    absoluteMode: true
     plugins:
       linter: true
       linterDecorationsZIndex: 0

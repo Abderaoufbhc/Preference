@@ -23,6 +23,7 @@ alias s='dev'
 alias data='cd /data/site/tr-data/'
 alias prod='cd /data/site/trsrc-PRODUCTION'
 alias pre='cd /data/site/trsrc-PRERELEASE'
+alias grepErrorMainline='grep 'ERROR \[' /etc/httpd-MAINLINE/logs/tripadvisor.log'
 
 # JRebel
 alias jrebel_tr='$TRTOP/scripts/jrebel-compile.bash tr' # only compile the tr classes and no jar/dependencies
@@ -36,21 +37,28 @@ alias cssFlush='$TRTOP/scripts/tweak flush css2'
 alias cssBuildFlush='$TRTOP/gradlew site:css2:assemble && cssFlush'
 alias cssDisableCompressConcat='$TRTOP/scripts/tweak feature off css_compress && $TRTOP/scripts/tweak feature off css_concat'
 
+# update js
 alias jsFlush='$TRTOP/scripts/tweak flush js3'
 alias jsBuildFlush='$TRTOP/gradlew site:js3:assemble && jsFlush'
 alias jsDisableCompressConcat='$TRTOP/scripts/tweak feature off js_compress && $TRTOP/scripts/tweak feature off js_concat'
 
-# Server bounce
+# update feature
+alias featureFlush='$TRTOP/gradlew config:assemble && $TRTOP/scripts/tweak flush features'
+
+# TRTOP shortcuts
 alias taClean='$TRTOP/gradlew clean'
 alias taConfigureBuild='$TRTOP/configure mainline && $TRTOP/gradlew assemble'
 alias taBounce='$TRTOP/scripts/tabuild -rdf'
 alias taFullConfigureAssembleBounce='taConfigureBuild && taBounce'
+alias taRebuildIDEA='$TRTOP/gradlew cleanIdea idea'
 
 # SVN aliases
 alias sup='svntr up'
 alias sd='svntr diff'
 alias ss='svntr st'
 alias spatch='patch -p0 -i'
+alias sTypeText='svn propset svn:mime-type 'text/plain''
+alias sCount='svn stat | wc -l'
 
 # Environment Variables
 fullHostName=`hostname -f`

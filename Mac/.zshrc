@@ -127,8 +127,12 @@ alias ..2='cd ../..'
 alias ..3='cd ../../..'
 alias ..4='cd ../../../..'
 alias ..5='cd ../../../../..'
+alias checkSpace='du -sh'
 alias dt='cd $HOME/Desktop'
 alias gd='cd $HOME/GoogleDrive'
+
+# Utility
+alias ps='ps aux'
 
 # Edit
 alias vi=vim
@@ -136,6 +140,10 @@ alias v='/usr/bin/vim'
 
 # zsh specific
 alias sc='source ~/.zshrc'
+
+# nvm specific
+# http://stackoverflow.com/questions/21215059/cant-use-nvm-from-root-or-sudo/29903645#29903645
+alias updateGlobalNode='n=$(which node);n=${n%/bin/node}; chmod -R 755 $n/bin/*; sudo cp -r $n/{bin,lib,share} /usr/local'
 
 # git specific
 alias gst='git status'
