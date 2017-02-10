@@ -23,7 +23,7 @@ alias s='dev'
 alias data='cd /data/site/tr-data/'
 alias prod='cd /data/site/trsrc-PRODUCTION'
 alias pre='cd /data/site/trsrc-PRERELEASE'
-alias grepErrorMainline='grep 'ERROR \[' /etc/httpd-MAINLINE/logs/tripadvisor.log'
+alias grepErrorMainline='grep "ERROR \[" /etc/httpd-MAINLINE/logs/tripadvisor.log'
 
 # JRebel
 alias jrebel_tr='$TRTOP/scripts/jrebel-compile.bash tr' # only compile the tr classes and no jar/dependencies
@@ -65,7 +65,7 @@ alias sup='svntr up'
 alias sd='svntr diff'
 alias ss='svntr st'
 alias spatch='patch -p0 -i'
-alias sTypeText='svn propset svn:mime-type 'text/plain''
+alias sTypeText='svn propset svn:mime-type "text/plain"'
 alias sCount='svn stat | wc -l'
 
 # iOS shortcuts

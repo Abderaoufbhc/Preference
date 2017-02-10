@@ -165,7 +165,7 @@ alias glogp='git log --pretty=format:"%h %s" --graph'
 fullHostName=`hostname -f`
 
 # Load .tarc
-if [[ $fullHostName == yfang-mac ]] && [ -f ~/.tarc ]; then
+if ([[ $fullHostName == yfang-mac ]] || [[ $fullHostName == *.tripadvisor.com ]]) && [ -f ~/.tarc ]; then
     source ~/.tarc
 fi
 
