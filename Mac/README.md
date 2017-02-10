@@ -59,7 +59,7 @@ Installation
 Packages to install
 ```shell
     $ brew update
-    $ brew install watch, watchman
+    $ brew install watch, watchman, the_silver_searcher
 ```
 
 #### Swift & Objective-C dependency manager: [CocoaPods](https://cocoapods.org/)
@@ -93,10 +93,10 @@ Installation:
 － `nvm ls` to check current node
 － `nvm install x.x` to install the latest node
 ```shell
-    sudo npm install -g babel-cli babel-node-debug bower csslint codeclimate-test-reporter eslint flow-bin gulp istanbul jasmine-node karma localtunnel npm-check npm-check-updates node-inspector nodemon plato pm2 webpack
+    npm install -g babel-cli bower csslint codeclimate-test-reporter eslint flow-bin gulp istanbul jasmine-node karma localtunnel npm-check npm-check-updates node-inspector nodemon plato pm2 webpack
 ```
   - Non-global item: express
-  - Unused items: generator-gulp-angular generator-gulp-webapp, learnyounode mean-cli yo
+  - Accessary items: generator-gulp-angular generator-gulp-webapp, learnyounode mean-cli yo
 
 
 #### Python package manager: gem?
@@ -159,6 +159,7 @@ System-wide installation [tutorial](https://pear.php.net/manual/en/installation.
       - Source: http://nshipster.com/xcode-plugins/
   - Inspector
     - Spark Inspector. (Paid)
+    - `brew update && brew install chisel`
   - Preference:
     - Behaviors:
       - Sound: Starts - Blow; Issue - Tink; Succeeds - Submarine; Fails - Purr

@@ -10,3 +10,4 @@ curl https://raw.githubusercontent.com/yinanfang/Preference/master/Mac/.tmux.con
 
 curl https://raw.githubusercontent.com/yinanfang/Preference/master/Mac/.atom/package-list.txt > ~/.atom/package-list.txt
 curl https://raw.githubusercontent.com/yinanfang/Preference/master/Mac/.atom/config.cson > ~/.atom/config.cson
+curl https://raw.githubusercontent.com/yinanfang/Preference/master/Mac/.atom/styles.less > ~/.atom/styles.less

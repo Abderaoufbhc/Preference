@@ -27,14 +27,15 @@ alias grepErrorMainline='grep 'ERROR \[' /etc/httpd-MAINLINE/logs/tripadvisor.lo
 
 # JRebel
 alias jrebel_tr='$TRTOP/scripts/jrebel-compile.bash tr' # only compile the tr classes and no jar/dependencies
-# update opf
 
-alias opfUpdate='$TRTOP/gradlew opf:assemble && $TRTOP/scripts/tweak flush opf'
-alias opfUpdate2='$TRTOP/opf/less.sh && $TRTOP/scripts/tweak flush opf'
+# update opf
+alias opfDebugBuild='$TRTOP/gradlew modules-opf:generateOpfs --debug'
+alias opfBuildFlush='$TRTOP/gradlew modules-opf:generateOpfs && $TRTOP/scripts/tweak flush opf'
 
 # update css
 alias cssFlush='$TRTOP/scripts/tweak flush css2'
 alias cssBuildFlush='$TRTOP/gradlew site:css2:assemble && cssFlush'
+alias cssCleanBuildFlush='$TRTOP/gradlew site:css2:clean && cssBuildFlush'
 alias cssDisableCompressConcat='$TRTOP/scripts/tweak feature off css_compress && $TRTOP/scripts/tweak feature off css_concat'
 
 # update js
@@ -45,12 +46,19 @@ alias jsDisableCompressConcat='$TRTOP/scripts/tweak feature off js_compress && $
 # update feature
 alias featureFlush='$TRTOP/gradlew config:assemble && $TRTOP/scripts/tweak flush features'
 
+# update placements
+alias placementsFlush='$TRTOP/scripts/tweak flush placements'
+
 # TRTOP shortcuts
 alias taClean='$TRTOP/gradlew clean'
-alias taConfigureBuild='$TRTOP/configure mainline && $TRTOP/gradlew assemble'
+alias taConfigure='$TRTOP/configure mainline'
+alias taBuild='$TRTOP/gradlew assemble'
+alias taConfigureBuild='taConfigure && taBuild'
 alias taBounce='$TRTOP/scripts/tabuild -rdf'
 alias taFullConfigureAssembleBounce='taConfigureBuild && taBounce'
-alias taRebuildIDEA='$TRTOP/gradlew cleanIdea idea'
+alias taRebuildIDEA='$TRTOP/gradlew cleanIdea && $TRTOP/gradlew idea'
+alias taProjectUpdate='taConfigureBuild && taRebuildIDEA'
+alias taKillServer='sudo killall java httpd'
 
 # SVN aliases
 alias sup='svntr up'
@@ -60,6 +68,10 @@ alias spatch='patch -p0 -i'
 alias sTypeText='svn propset svn:mime-type 'text/plain''
 alias sCount='svn stat | wc -l'
 
+# iOS shortcuts
+alias taiOSInstallCertificate='bundle exec fastlane run ta_install_trust_certificate_to_ios_simulators devices_home_path:"$HOME/Library/Developer/CoreSimulator/Devices/"'
+alias taiOSUpdateDependency='bundle update; bundle install --binstubs && bundle exec rake init && pod repo update && bundle exec pod install'
+
 # Environment Variables
 fullHostName=`hostname -f`
 if [ -f ~/.tarc ] && [[ $fullHostName == *yfang-mac* ]]; then
@@ -67,6 +79,13 @@ if [ -f ~/.tarc ] && [[ $fullHostName == *yfang-mac* ]]; then
   export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_92.jdk/Contents/Home
   export PATH=$JAVA_HOME/bin:$PATH
   export TRTOP=/Users/yfang/trsrc-MAINLINE
+
+  # For iOS project
+  export PATH="./bin:$PATH" # bin contain many runnable scripts
+  export RBENV_ROOT=/usr/local/var/rbenv # gem install location
+  eval "$(rbenv init - --no-rehash)"
+  export COCOAPODS_DISABLE_DETERMINISTIC_UUIDS=1
+
 elif [ -f ~/.tarc ] && [[ $fullHostName == *.tripadvisor.com ]]; then
   # TA Dev box/sled
   export JAVA_HOME=/usr/jdk1.8
@@ -118,8 +137,7 @@ function trtop {
 }
 
 # OPF
-function rm_copy_extension()
-{
+function rm_copy_extension() {
     for file in *;
     do
         fname=`basename $file .copy`
@@ -128,4 +146,9 @@ function rm_copy_extension()
             mv $file $fname;
         fi
     done;
+}
+
+# Log - findErrorInDevMainline 'Unknown Servlet'
+function findErrorInDevMainline() {
+  grep $1 /etc/httpd-MAINLINE/logs/tripadvisor.log*
 }

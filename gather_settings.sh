@@ -28,6 +28,7 @@ if hash atom 2>/dev/null; then
   mkdir -pv ./Mac/.atom
   apm list --installed --bare > ~/Code/Preference/Mac/.atom/package-list.txt
   rsync -uq ~/.atom/config.cson ./Mac/.atom
+  rsync -uq ~/.atom/styles.less ./Mac/.atom
 else
   echo 'Atom not installed!'
 fi

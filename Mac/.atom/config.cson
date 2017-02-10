@@ -28,6 +28,7 @@
       "tree-view"
       "linter-scss-lint"
       "linter-csslint"
+      "vim-mode"
     ]
     excludeVcsIgnoredPaths: false
     ignoredNames: [
@@ -42,7 +43,7 @@
     packagesWithKeymapsDisabled: []
     telemetryConsent: "limited"
     themes: [
-      "atom-dark-ui"
+      "one-dark-ui"
       "firewatch-syntax"
     ]
   editor:

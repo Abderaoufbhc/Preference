@@ -84,19 +84,6 @@ export NVM_DIR="$HOME/.nvm"
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
-# TripAdvisor specific
-# Mac OS
-# export JAVA_HOME=\$(/usr/libexec/java_home)
-#export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_92.jdk/Contents/Home
-#export PATH=$JAVA_HOME/bin:$PATH
-#export TRTOP=/Users/yfang/trsrc-MAINLINE
-# CentOS server
-# export JAVA_HOME=/usr/jdk1.8
-# export ANT_HOME=/usr/local/ant
-# export PATH=$PATH:$JAVA_HOME/bin:/usr/local/pgsql/bin:$ANT_HOME/bin
-# export TRTOP=/home/site/trsrc-MAINLINE
-
-
 #########
 # Aliases
 # \command -> temporarily disable an alias
@@ -166,19 +153,23 @@ alias glogp='git log --pretty=format:"%h %s" --graph'
 # alias fip = 'ifconfig | grep -Eo \'inet (addr:)?([0-9]*\.){3}[0-9]*\' | grep -Eo \'([0-9]*\.){3}[0-9]*\' | grep -vE \'(127.0.0.1|172.17.*|192.168.*)\''
 
 # if user is not root, pass all commands via sudo #
-if [ $UID -ne 0 ]; then
-   alias reboot='sudo reboot'
-   alias update='sudo apt-get upgrade'
-fi
+# if [ $UID -ne 0 ]; then
+#    alias reboot='sudo reboot'
+#    alias update='sudo apt-get upgrade'
+# fi
 
-# Load TA settings
-if [ -f ~/.tarc ];
-then
+############################################
+# Load TripAdvisor specific settings
+############################################
+
+fullHostName=`hostname -f`
+
+# Load .tarc
+if [[ $fullHostName == yfang-mac ]] && [ -f ~/.tarc ]; then
     source ~/.tarc
 fi
 
 # Go to TRTOP if on dev servers
-fullHostName=`hostname -f`
 if [[ $fullHostName == *.tripadvisor.com ]]; then
   cd $TRTOP
 fi
