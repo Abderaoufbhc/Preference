@@ -59,6 +59,8 @@ alias taFullConfigureAssembleBounce='taConfigureBuild && taBounce'
 alias taRebuildIDEA='$TRTOP/gradlew cleanIdea && $TRTOP/gradlew idea'
 alias taProjectUpdate='taConfigureBuild && taRebuildIDEA'
 alias taKillServer='sudo killall java httpd'
+alias taSetBuildConfig='taKillServer && nvm use 4.4.7' # Gradle daemon may use wrong version of npm. Kill/restart it by killing java processes
+alias taSmoke='$TRTOP/gradlew config:assemble && $TRTOP/gradlew smoke'
 
 # SVN aliases
 alias sup='svntr up'
@@ -71,6 +73,10 @@ alias sCount='svn stat | wc -l'
 # iOS shortcuts
 alias taiOSInstallCertificate='bundle exec fastlane run ta_install_trust_certificate_to_ios_simulators devices_home_path:"$HOME/Library/Developer/CoreSimulator/Devices/"'
 alias taiOSUpdateDependency='bundle update; bundle install --binstubs && bundle exec rake init && pod repo update && bundle exec pod install'
+
+# Android shortcuts: https://docs.dev.tripadvisor.com/display/MOB/Android+Build+Setup#AndroidBuildSetup-Buildfromthecommand-line
+alias taAndroidBuildDebug='./gradlew apps:TAMobileApp:assembleDevDebug'
+alias taAndroidBuildDebugInstall='./gradlew apps:TAMobileApp:installDevDebug'
 
 # Environment Variables
 fullHostName=`hostname -f`
@@ -86,11 +92,19 @@ if [ -f ~/.tarc ] && [[ $fullHostName == *yfang-mac* ]]; then
   eval "$(rbenv init - --no-rehash)"
   export COCOAPODS_DISABLE_DETERMINISTIC_UUIDS=1
 
+  # For Android project
+  export ANDROID_HOME=/Users/yfang/android-sdk-macosx
+  export PATH=$PATH:$ANDROID_HOME/tools # It needs to be called "tool"
+
 elif [ -f ~/.tarc ] && [[ $fullHostName == *.tripadvisor.com ]]; then
   # TA Dev box/sled
   export JAVA_HOME=/usr/jdk1.8
   export ANT_HOME=/usr/local/ant
   export TRTOP=/home/site/trsrc-MAINLINE
+
+  # Platform Reporting
+  export TOMCAT7=/usr/local/tomcat7
+  export PRTOP=/home/site/platform-reporting
 
   # Server CentOS 6
   # export JAVA_HOME=/usr/jdk1.8

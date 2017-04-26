@@ -93,7 +93,7 @@ Installation:
 － `nvm ls` to check current node
 － `nvm install x.x` to install the latest node
 ```shell
-    npm install -g babel-cli bower csslint codeclimate-test-reporter eslint flow-bin gulp istanbul jasmine-node karma localtunnel npm-check npm-check-updates node-inspector nodemon plato pm2 webpack
+    npm install -g babel-cli bower csslint codeclimate-test-reporter eslint flow-bin flow-typed gulp istanbul jasmine-node karma localtunnel npm-check npm-check-updates node-inspector nodemon plato pm2 webpack
 ```
   - Non-global item: express
   - Accessary items: generator-gulp-angular generator-gulp-webapp, learnyounode mean-cli yo
