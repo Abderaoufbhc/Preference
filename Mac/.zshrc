@@ -159,6 +159,34 @@ alias glogp='git log --pretty=format:"%h %s" --graph'
 # fi
 
 ############################################
+# Load tmuxinator settings
+# https://github.com/tmuxinator/tmuxinator/blob/master/completion/tmuxinator.zsh
+############################################
+export DISABLE_AUTO_TITLE=true
+
+_tmuxinator() {
+  local commands projects
+  commands=(${(f)"$(tmuxinator commands zsh)"})
+  projects=(${(f)"$(tmuxinator completions start)"})
+
+  if (( CURRENT == 2 )); then
+    _describe -t commands "tmuxinator subcommands" commands
+    _describe -t projects "tmuxinator projects" projects
+  elif (( CURRENT == 3)); then
+    case $words[2] in
+      copy|debug|delete|open|start)
+         _arguments '*:projects:($projects)'
+      ;;
+    esac
+  fi
+
+  return
+}
+
+compdef _tmuxinator tmuxinator mux
+alias mux="tmuxinator"
+
+############################################
 # Load TripAdvisor specific settings
 ############################################
 
@@ -172,4 +200,6 @@ fi
 # Go to TRTOP if on dev servers
 if [[ $fullHostName == *.tripadvisor.com ]]; then
   cd $TRTOP
+  mux start trip
 fi
+

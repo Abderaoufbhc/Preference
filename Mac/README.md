@@ -93,7 +93,7 @@ Installation:
 － `nvm ls` to check current node
 － `nvm install x.x` to install the latest node
 ```shell
-    npm install -g babel-cli bower csslint codeclimate-test-reporter eslint flow-bin flow-typed gulp istanbul jasmine-node karma localtunnel npm-check npm-check-updates node-inspector nodemon plato pm2 webpack
+    $ npm install -g babel-cli bower csslint codeclimate-test-reporter eslint flow-bin flow-typed gulp istanbul jasmine-node karma localtunnel npm-check npm-check-updates node-inspector nodemon plato pm2 webpack
 ```
   - Non-global item: express
   - Accessary items: generator-gulp-angular generator-gulp-webapp, learnyounode mean-cli yo
@@ -134,10 +134,20 @@ System-wide installation [tutorial](https://pear.php.net/manual/en/installation.
       - Terminal: Scrollback Lines: 100,000
     - Keys
       - Hotkey - Show/hide iTerm2 & Hotkey toggles
+      - Right option key: Meta (tmux use it as Alt)
 
 #### Utility
-
   - wget: No wget on Mac. Use curl instead
+
+#### tmux
+```shell
+    # Mac
+    $ brew install tmux
+    # Ubuntu/Debian
+    $ sudo apt-get install tmux
+
+    $ gem install tmuxinator
+```
 
 ---
 
