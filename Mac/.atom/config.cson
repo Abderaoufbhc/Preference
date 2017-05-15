@@ -29,6 +29,8 @@
       "linter-scss-lint"
       "linter-csslint"
       "vim-mode"
+      "todo-show"
+      "kite"
     ]
     excludeVcsIgnoredPaths: false
     ignoredNames: [
