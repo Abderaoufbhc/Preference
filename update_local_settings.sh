@@ -17,4 +17,5 @@ curl https://raw.githubusercontent.com/yinanfang/Preference/master/Mac/.atom/pac
 curl https://raw.githubusercontent.com/yinanfang/Preference/master/Mac/.atom/config.cson > ~/.atom/config.cson
 curl https://raw.githubusercontent.com/yinanfang/Preference/master/Mac/.atom/styles.less > ~/.atom/styles.less
 
-source ~/.zshrc
+exec zsh # prevent error about compdef
+# source ~/.zshrc
