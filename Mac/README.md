@@ -6,6 +6,16 @@ Quick installation guide for all settings
 
 ## Try put all of them into 1 script?
 
+## Set up zsh
+```shell
+    # Install zsh
+    sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+    # Or --> curl -L http://install.ohmyz.sh | sh
+
+    # Suggestion plugins
+    git clone git://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
+```
+
 ## Copy settings
 ```shell
     sh -c "$(curl https://raw.githubusercontent.com/yinanfang/Preference/master/update_local_settings.sh)"
@@ -15,16 +25,6 @@ Quick installation guide for all settings
 ```shell
     git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
     vim +PluginInstall +qall
-```
-
-## Set up zsh
-```shell
-    # Install zsh
-    sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-    # Or --> curl -L http://install.ohmyz.sh | sh
-
-    # Suggestion plugins
-    git clone git://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
 ```
 
 ## Application:
@@ -172,7 +172,7 @@ System-wide installation [tutorial](https://pear.php.net/manual/en/installation.
     $ brew install tmux
     # Ubuntu/Debian
     $ sudo apt-get install tmux
-
+    # CentOS
     $ gem install tmuxinator
 ```
 
