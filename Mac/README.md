@@ -27,6 +27,15 @@ Quick installation guide for all settings
     vim +PluginInstall +qall
 ```
 
+## Set up Atom
+```shell
+    # Open atom and install shell commands
+    # -->> Shift+Cmd+P - Install shell command
+
+    # Install packages
+    apm install --packages-file ~/.atom/package-list.txt
+```
+
 ## Application:
 
 #### Browser

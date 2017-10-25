@@ -25,12 +25,12 @@
       "linter-markdown"
       "linter"
       "terminal-plus"
-      "tree-view"
       "linter-scss-lint"
       "linter-csslint"
       "vim-mode"
       "todo-show"
       "kite"
+      "tree-view"
     ]
     excludeVcsIgnoredPaths: false
     ignoredNames: [
@@ -140,6 +140,8 @@
     iconSize: "16px"
     position: "Left"
   "travis-ci-status": {}
+  "vim-mode-plus":
+    notifiedCoffeeScriptNoLongerSupportedToExtendVMP: true
   welcome:
     showOnStartup: false
   whitespace: {}
