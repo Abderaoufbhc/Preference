@@ -61,7 +61,8 @@ source $ZSH/oh-my-zsh.sh
 if [[ -n $SSH_CONNECTION ]]; then
   export EDITOR='vim'
 else
-  export EDITOR='atom'
+  # export EDITOR='atom' # may cause issue when some command line script may quit
+  export EDITOR='vim'
 fi
 
 # Compilation flags
@@ -84,6 +85,8 @@ export NVM_DIR="$HOME/.nvm"
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 #########
 # Aliases
 # \command -> temporarily disable an alias
@@ -120,6 +123,7 @@ alias gd='cd $HOME/GoogleDrive'
 
 # Utility
 alias ps='ps aux'
+alias restartShell='exec -l $SHELL'
 
 # Edit
 alias vi=vim
@@ -148,6 +152,8 @@ alias gcot='git checkout -t'
 alias gcotb='git checkout --track -b'
 alias glog='git log'
 alias glogp='git log --pretty=format:"%h %s" --graph'
+
+alias gr='git-review'
 
 # history | awk '{CMD[$2]++;count++;}END { for (a in CMD)print CMD[a] " " CMD[a]/count*100 "% " a;}' | grep -v "./" | column -c3 -s " " -t | sort -nr | nl |  head -n10
 # alias fip = 'ifconfig | grep -Eo \'inet (addr:)?([0-9]*\.){3}[0-9]*\' | grep -Eo \'([0-9]*\.){3}[0-9]*\' | grep -vE \'(127.0.0.1|172.17.*|192.168.*)\''
@@ -202,4 +208,13 @@ if [[ $fullHostName == *.tripadvisor.com ]]; then
   cd $TRTOP
   mux start trip
 fi
+
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOPATH/bin # Add RVM to PATH for scripting
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/lucas.fang/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/lucas.fang/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/lucas.fang/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/lucas.fang/google-cloud-sdk/completion.zsh.inc'; fi
 

@@ -31,6 +31,7 @@
       "todo-show"
       "kite"
       "tree-view"
+      "MagicPython"
     ]
     excludeVcsIgnoredPaths: false
     ignoredNames: [
@@ -140,8 +141,7 @@
     iconSize: "16px"
     position: "Left"
   "travis-ci-status": {}
-  "vim-mode-plus":
-    notifiedCoffeeScriptNoLongerSupportedToExtendVMP: true
+  "vim-mode-plus": {}
   welcome:
     showOnStartup: false
   whitespace: {}
