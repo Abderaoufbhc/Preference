@@ -129,8 +129,9 @@ alias restartShell='exec -l $SHELL'
 alias vi=vim
 alias v='/usr/bin/vim'
 
-# zsh specific
+# source
 alias sc='source ~/.zshrc'
+alias tc='tmux source ~/.tmux.conf'
 
 # nvm specific
 # http://stackoverflow.com/questions/21215059/cant-use-nvm-from-root-or-sudo/29903645#29903645
@@ -217,4 +218,3 @@ if [ -f '/Users/lucas.fang/google-cloud-sdk/path.zsh.inc' ]; then source '/Users
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/lucas.fang/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/lucas.fang/google-cloud-sdk/completion.zsh.inc'; fi
-
