@@ -67,7 +67,7 @@
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>496 1818 620 392 -474 1050 2560 1417 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>817 1369 796 473 -130 1050 1920 1057 </string>
+	<string>745 304 796 473 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
 	<string>779 1088 1011 1019 -130 1050 1920 1057 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
@@ -385,14 +385,14 @@
 					<key>Action</key>
 					<integer>11</integer>
 					<key>Text</key>
-					<string>0x1b 0x08</string>
+					<string>0x15</string>
 				</dict>
 				<key>0x7f-0x80000</key>
 				<dict>
 					<key>Action</key>
 					<integer>11</integer>
 					<key>Text</key>
-					<string>0x15</string>
+					<string>0x1b 0x08</string>
 				</dict>
 				<key>0xf700-0x220000</key>
 				<dict>
@@ -476,14 +476,14 @@
 					<key>Action</key>
 					<integer>11</integer>
 					<key>Text</key>
-					<string>0x01</string>
+					<string>0x1b 0x62</string>
 				</dict>
 				<key>0xf702-0x300000</key>
 				<dict>
 					<key>Action</key>
 					<integer>11</integer>
 					<key>Text</key>
-					<string>0x1b 0x62</string>
+					<string>0x01</string>
 				</dict>
 				<key>0xf703-0x220000</key>
 				<dict>
@@ -511,14 +511,14 @@
 					<key>Action</key>
 					<integer>11</integer>
 					<key>Text</key>
-					<string>0x05</string>
+					<string>0x1b 0x66</string>
 				</dict>
 				<key>0xf703-0x300000</key>
 				<dict>
 					<key>Action</key>
 					<integer>11</integer>
 					<key>Text</key>
-					<string>0x1b 0x66</string>
+					<string>0x05</string>
 				</dict>
 				<key>0xf704-0x20000</key>
 				<dict>
