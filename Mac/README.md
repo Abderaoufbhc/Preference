@@ -154,23 +154,25 @@ System-wide installation [tutorial](https://pear.php.net/manual/en/installation.
 ## Command Line
 
 #### Terminal/iTerm2
-
-  - Scheme: Ta-Da (Default)
-  - Font: Fira Mono Medium for Powerline 11 pt for "Regular" and "Non-ASCII"
-  - Window Size: Column 120 - Row 40/50
-  - Cursor: FF0000 / Smart cursor color
-  - Color Scheme:
-      - Bright Orange: Window (0xFF9900 Color Pallettes - Web Safe Colors); Text (0xFFFFFF Black)
-      - Pastel Black: Window (0x2D2D2D Patel black); Text (0xFFFFFF White)
-  - iTerm2
-    - Keys: Hotkey: system-wide: Cmd+i
-    - Profile
-      - List: Ta-Da, Hotkey Window
-      - Window: Transparency: ~90%
-      - Terminal: Scrollback Lines: 100,000
-    - Keys
-      - Hotkey - Show/hide iTerm2 & Hotkey toggles
-      - Right option key: Meta (tmux use it as Alt)
+- Preferences -> General - [Guide](https://stackoverflow.com/questions/6205157/iterm-2-how-to-set-keyboard-shortcuts-to-jump-to-beginning-end-of-line)
+  - Load preferences from a custom folder or URL
+  - Save settings to Folder
+- Scheme: Ta-Da (Default)
+- Font: Fira Mono Medium for Powerline 11 pt for "Regular" and "Non-ASCII"
+- Window Size: Column 120 - Row 40/50
+- Cursor: FF0000 / Smart cursor color
+- Color Scheme:
+    - Bright Orange: Window (0xFF9900 Color Pallettes - Web Safe Colors); Text (0xFFFFFF Black)
+    - Pastel Black: Window (0x2D2D2D Patel black); Text (0xFFFFFF White)
+- iTerm2
+  - Keys: Hotkey: system-wide: Cmd+i
+  - Profile
+    - List: Ta-Da, Hotkey Window
+    - Window: Transparency: ~90%
+    - Terminal: Scrollback Lines: 100,000
+  - Keys
+    - Hotkey - Show/hide iTerm2 & Hotkey toggles
+    - Right option key: Meta (tmux use it as Alt)
 
 #### Utility
   - wget: No wget on Mac. Use curl instead
