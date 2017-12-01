@@ -22,3 +22,5 @@
 	template = /Users/yfang/.stCommitMsg
 [gerrit]
 	username = yfang
+[credential]
+	helper = cache --timeout=86400

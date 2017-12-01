@@ -1,6 +1,10 @@
 # Path to your oh-my-zsh installation.
 export ZSH=~/.oh-my-zsh
 
+#########################################################################################
+# zsh configuration
+#########################################################################################
+
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
@@ -47,12 +51,29 @@ ENABLE_CORRECTION="true"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git zsh-autosuggestions)
 
-# User configuration
-
-export PATH=$HOME/bin:/usr/local/bin:$PATH
-# export MANPATH="/usr/local/man:$MANPATH"
-
+# zsh source
 source $ZSH/oh-my-zsh.sh
+
+#########################################################################################
+# Path
+#########################################################################################
+
+# Prioritize user bin
+export PATH=$HOME/bin:$PATH
+
+# Add go path
+export GOPATH=$HOME/go
+export PATH=$GOPATH/bin:$PATH # Add RVM to PATH for scripting
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/lucas.fang/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/lucas.fang/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/lucas.fang/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/lucas.fang/google-cloud-sdk/completion.zsh.inc'; fi
+
+#########################################################################################
+# User configuration
+#########################################################################################
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
@@ -80,13 +101,6 @@ fi
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
-
-
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 #########
 # Aliases
 # \command -> temporarily disable an alias
@@ -118,8 +132,8 @@ alias ..3='cd ../../..'
 alias ..4='cd ../../../..'
 alias ..5='cd ../../../../..'
 alias checkSpace='du -sh'
-alias dt='cd $HOME/Desktop'
-alias gd='cd $HOME/GoogleDrive'
+alias cdd='cd $HOME/Desktop'
+alias cdg='cd $HOME/GoogleDrive'
 
 # Utility
 alias ps='ps aux'
@@ -129,7 +143,7 @@ alias restartShell='exec -l $SHELL'
 alias vi=vim
 alias v='/usr/bin/vim'
 
-# source
+# source specific
 alias sc='source ~/.zshrc'
 alias tc='tmux source ~/.tmux.conf'
 
@@ -194,27 +208,13 @@ compdef _tmuxinator tmuxinator mux
 alias mux="tmuxinator"
 
 ############################################
-# Load TripAdvisor specific settings
+# Load other settings
 ############################################
 
 fullHostName=`hostname -f`
 
 # Load .tarc
-if ([[ $fullHostName == yfang-mac ]] || [[ $fullHostName == *.tripadvisor.com ]]) && [ -f ~/.tarc ]; then
-    source ~/.tarc
-fi
+# if ([[ $fullHostName == yfang-mac ]] || [[ $fullHostName == *.tripadvisor.com ]]) && [ -f ~/.tarc ]; then
+#     source ~/.tarc
+# fi
 
-# Go to TRTOP if on dev servers
-if [[ $fullHostName == *.tripadvisor.com ]]; then
-  cd $TRTOP
-  mux start trip
-fi
-
-export GOPATH=$HOME/go
-export PATH=$PATH:$GOPATH/bin # Add RVM to PATH for scripting
-
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/lucas.fang/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/lucas.fang/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/lucas.fang/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/lucas.fang/google-cloud-sdk/completion.zsh.inc'; fi

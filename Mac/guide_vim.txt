@@ -132,7 +132,7 @@ Picking up the brush
   ESC
   Ctrl+[
 
-
+In normal mode, typing Ctrl-A will increment the next number, and typing Ctrl-X will decrement the next number
 
 Advanced
   ~  - Toggle the case of character under cursor

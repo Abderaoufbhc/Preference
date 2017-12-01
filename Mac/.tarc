@@ -1,6 +1,12 @@
 # ~/.tarc
 # TripAdvisor specific
 
+# Go to TRTOP if on dev servers
+# if [[ $fullHostName == *.tripadvisor.com ]]; then
+#   cd $TRTOP
+#   mux start trip
+# fi
+
 # Login
 export hostBox='yfang-box.dhcp.tripadvisor.com'
 alias sshBox='ssh $hostBox'
@@ -124,6 +130,10 @@ elif [ -f ~/.tarc ] && [[ $fullHostName == *.tripadvisor.com ]]; then
   # Forward ssh agent for tmux
   export SSH_AUTH_SOCK=0
 fi
+
+# export NVM_DIR="$HOME/.nvm"
+# [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+# export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
 # Helper functions
 function findtrtop {
