@@ -61,9 +61,10 @@ source $ZSH/oh-my-zsh.sh
 # Prioritize user bin
 export PATH=$HOME/bin:$PATH
 
-# Add go path
+# Add go home 
 export GOPATH=$HOME/go
-export PATH=$GOPATH/bin:$PATH # Add RVM to PATH for scripting
+# Add go bin. linux machine needs explicit /usr/local/go/bin
+export PATH=$GOPATH/bin:/usr/local/go/bin:$PATH 
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f "$HOME/google-cloud-sdk/path.zsh.inc" ]; then source "$HOME/google-cloud-sdk/path.zsh.inc"; fi
