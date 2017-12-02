@@ -55,22 +55,15 @@ plugins=(git zsh-autosuggestions)
 source $ZSH/oh-my-zsh.sh
 
 #########################################################################################
-# Path
+# User Path
 #########################################################################################
 
-# Prioritize user bin
-export PATH=$HOME/bin:$PATH
-
-# Add go home 
-export GOPATH=$HOME/go
-# Add go bin. linux machine needs explicit /usr/local/go/bin
-export PATH=$GOPATH/bin:/usr/local/go/bin:$PATH 
-
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f "$HOME/google-cloud-sdk/path.zsh.inc" ]; then source "$HOME/google-cloud-sdk/path.zsh.inc"; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f "$HOME/google-cloud-sdk/completion.zsh.inc" ]; then source "$HOME/google-cloud-sdk/completion.zsh.inc"; fi
+# Prevent tmux from duplicating PATH
+# https://stackoverflow.com/questions/13058578/how-to-prevent-tmux-from-filling-up-the-global-path-variable-with-duplicated-pat
+if [[ -z $TMUX ]]; then
+  # Prioritize user bin
+  export PATH=$HOME/bin:$PATH
+fi
 
 #########################################################################################
 # User configuration
@@ -142,7 +135,7 @@ alias restartShell='exec -l $SHELL'
 
 # Edit
 alias vi=vim
-alias v='/usr/bin/vim'
+alias v=vim
 
 # source specific
 alias sc='source ~/.zshrc'
@@ -153,23 +146,22 @@ alias tc='tmux source ~/.tmux.conf'
 alias updateGlobalNode='n=$(which node);n=${n%/bin/node}; chmod -R 755 $n/bin/*; sudo cp -r $n/{bin,lib,share} /usr/local'
 
 # git specific
+alias glog='git log'
+alias glogp='git log --pretty=format:"%h %s" --graph'
 alias gst='git status'
-alias gl='git pull'
-alias gp='git push'
-alias gd='git diff'
-alias gau='git add --update'
-alias gc='git commit -v'
-alias gca='git commit -v -a'
 alias gb='git branch'
 alias gba='git branch -a'
 alias gco='git checkout'
 alias gcob='git checkout -b'
 alias gcot='git checkout -t'
-alias gcotb='git checkout --track -b'
-alias glog='git log'
-alias glogp='git log --pretty=format:"%h %s" --graph'
-
-alias gr='git-review'
+alias gcotb='git checkout -t -b'
+alias gl='git pull'
+alias gsync="git pull && git submodule update"
+alias gau='git add --update'
+alias gd='git diff'
+alias gc='git commit -v'
+alias gca='git commit -v -a'
+alias gp='git push'
 
 # history | awk '{CMD[$2]++;count++;}END { for (a in CMD)print CMD[a] " " CMD[a]/count*100 "% " a;}' | grep -v "./" | column -c3 -s " " -t | sort -nr | nl |  head -n10
 # alias fip = 'ifconfig | grep -Eo \'inet (addr:)?([0-9]*\.){3}[0-9]*\' | grep -Eo \'([0-9]*\.){3}[0-9]*\' | grep -vE \'(127.0.0.1|172.17.*|192.168.*)\''
@@ -214,8 +206,13 @@ alias mux="tmuxinator"
 
 fullHostName=`hostname -f`
 
-# Load .tarc
+# TripAdvisor configurations
 # if ([[ $fullHostName == yfang-mac ]] || [[ $fullHostName == *.tripadvisor.com ]]) && [ -f ~/.tarc ]; then
 #     source ~/.tarc
 # fi
+
+# SnapChat configurations
+if [ -f ~/.snaprc ]; then
+  source ~/.snaprc
+fi
 

@@ -12,6 +12,11 @@ if [ -f ~/.tarc ]; then
   rsync -uq ~/.tarc ./Mac
 fi
 
+if [ -f ~/.snaprc ]; then
+  echo 'Gathering SnapChat Shell config...'
+  rsync -uq ~/.snaprc ./Mac
+fi
+
 # Git
 echo 'Gathering Git config...'
 rsync -uq ~/.gitconfig ./Mac

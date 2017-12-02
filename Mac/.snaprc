@@ -1,0 +1,26 @@
+
+
+#########################################################################################
+# User Path
+#########################################################################################
+
+# Prevent tmux from duplicating PATH
+# https://stackoverflow.com/questions/13058578/how-to-prevent-tmux-from-filling-up-the-global-path-variable-with-duplicated-pat
+if [[ -z $TMUX ]]; then
+  # Add go home
+  export GOPATH=$HOME/go
+  # Add go bin. linux machine needs explicit /usr/local/go/bin
+  export PATH=$GOPATH/bin:/usr/local/go/bin:$PATH
+
+  # The next line updates PATH for the Google Cloud SDK.
+  if [ -f "$HOME/google-cloud-sdk/path.zsh.inc" ]; then source "$HOME/google-cloud-sdk/path.zsh.inc"; fi
+  # The next line enables shell command completion for gcloud.
+  if [ -f "$HOME/google-cloud-sdk/completion.zsh.inc" ]; then source "$HOME/google-cloud-sdk/completion.zsh.inc"; fi
+fi
+
+#########################################################################################
+# Alias
+#########################################################################################
+
+# git-review
+alias gr='git-review'
