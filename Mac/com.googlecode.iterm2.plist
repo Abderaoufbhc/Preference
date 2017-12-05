@@ -67,9 +67,9 @@
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>496 1818 620 392 -474 1050 2560 1417 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>745 304 796 473 0 0 1680 1027 </string>
+	<string>817 1369 796 473 -130 1050 1920 1057 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>779 1088 1011 1019 -130 1050 1920 1057 </string>
+	<string>758 1073 1032 1034 -130 1050 1920 1057 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>117 1157 850 707 -130 1050 1920 1057 </string>
 	<key>New Bookmarks</key>
@@ -656,7 +656,7 @@
 			<key>Screen</key>
 			<integer>-1</integer>
 			<key>Scrollback Lines</key>
-			<integer>1000</integer>
+			<integer>1000000</integer>
 			<key>Selected Text Color</key>
 			<dict>
 				<key>Blue Component</key>
@@ -1305,7 +1305,7 @@
 	<key>NoSyncInstallationId</key>
 	<string>B0AE15B6-B295-410E-8CA3-A7BDD319F2CF</string>
 	<key>NoSyncLastTipTime</key>
-	<real>533598763.32432699</real>
+	<real>534202505.47740799</real>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
@@ -1333,6 +1333,12 @@
 		<string>0013</string>
 		<string>0014</string>
 		<string>0015</string>
+		<string>0016</string>
+		<string>0017</string>
+		<string>0018</string>
+		<string>0019</string>
+		<string>0020</string>
+		<string>0021</string>
 	</array>
 	<key>PointerActions</key>
 	<dict>
@@ -1378,7 +1384,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2017-11-28T19:44:20Z</date>
+	<date>2017-12-04T03:58:29Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>WordCharacters</key>

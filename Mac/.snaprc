@@ -1,5 +1,4 @@
 
-
 #########################################################################################
 # User Path
 #########################################################################################
@@ -24,3 +23,13 @@ fi
 
 # git-review
 alias gr='git-review'
+
+# GKE
+# usage: gke dev f cron-scheduler-dev
+gke_all () {
+   gcloud container clusters get-credentials --project=context-$1 --zone=us-central1-$2 $3
+}
+gke_dev ()
+{
+   gcloud container clusters get-credentials --project=context-dev --zone=us-central1-$f cron-scheduler-dev
+}
