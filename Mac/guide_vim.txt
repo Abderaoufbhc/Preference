@@ -184,3 +184,12 @@ To-read
 :set nonumber
 
 :edit file
+
+
+
+Easy Motion: https://github.com/easymotion/vim-easymotion/blob/master/doc/easymotion.txt
+<Leader>j            | Line downward. See |j|.
+    <Leader>k            | Line upward. See |k|.
+
+
+Vim list: https://vimawesome.com/

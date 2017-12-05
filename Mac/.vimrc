@@ -13,11 +13,14 @@ Plugin 'VundleVim/Vundle.vim'
 " All other plugins
 Plugin 'altercation/vim-colors-solarized'   " Color theme
 
-Plugin 'tpope/vim-fugitive'                 " plugin on Git wrapper
-Plugin 'scrooloose/nerdtree'                " A tree explorer plugin
-Plugin 'Lokaltog/vim-easymotion'            " Vim motions on speed
-Plugin 'vim-airline/vim-airline'            " lean & mean status/tabline for vim that's light as air
-Plugin 'vim-airline/vim-airline-themes'     " airline theme
+Plugin 'tpope/vim-fugitive'                     " plugin on Git wrapper
+Plugin 'scrooloose/nerdtree'                    " A tree explorer plugin
+Plugin 'Lokaltog/vim-easymotion'                " Vim motions on speed
+Plugin 'vim-airline/vim-airline'                " lean & mean status/tabline for vim that's light as air
+Plugin 'vim-airline/vim-airline-themes'         " airline theme
+Plugin 'haya14busa/incsearch.vim'               " Improved incremental searching for Vim
+Plugin 'haya14busa/incsearch-fuzzy.vim'         " incsearch fuzzy support
+Plugin 'haya14busa/incsearch-easymotion.vim'    " incsearch-easymotion integration
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -55,7 +58,55 @@ autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
 " Easy Motion
-map <Leader> <Plug>(easymotion-prefix)
+" map <Leader> <Plug>(easymotion-prefix)
+" <Leader>f{char} to move to {char}
+map  <Leader>f <Plug>(easymotion-bd-f)
+nmap <Leader>f <Plug>(easymotion-overwin-f)
+" s{char}{char} to move to {char}{char}
+nmap s <Plug>(easymotion-overwin-f2)
+" Move to line
+map <Leader>L <Plug>(easymotion-bd-jk)
+nmap <Leader>L <Plug>(easymotion-overwin-line)
+" Move to word
+map  <Leader>w <Plug>(easymotion-bd-w)
+nmap <Leader>w <Plug>(easymotion-overwin-w)
+" Integration with incsearch.vim 
+" function! s:incsearch_config(...) abort
+"   return incsearch#util#deepextend(deepcopy({
+"   \   'modules': [incsearch#config#easymotion#module({'overwin': 1})],
+"   \   'keymap': {
+"   \     "\<CR>": '<Over>(easymotion)'
+"   \   },
+"   \   'is_expr': 0
+"   \ }), get(a:, 1, {}))
+" endfunction
+" noremap <silent><expr> /  incsearch#go(<SID>incsearch_config())
+" noremap <silent><expr> ?  incsearch#go(<SID>incsearch_config({'command': '?'}))
+" noremap <silent><expr> g/ incsearch#go(<SID>incsearch_config({'is_stay': 1}))
+" Bonus fuzzy-search with EasyMotion 
+" function! s:config_easyfuzzymotion(...) abort
+"   return extend(copy({
+"   \   'converters': [incsearch#config#fuzzyword#converter()],
+"   \   'modules': [incsearch#config#easymotion#module({'overwin': 1})],
+"   \   'keymap': {"\<CR>": '<Over>(easymotion)'},
+"   \   'is_expr': 0,
+"   \   'is_stay': 1
+"   \ }), get(a:, 1, {}))
+" endfunction
+" noremap <silent><expr> <Space>/ incsearch#go(<SID>config_easyfuzzymotion())
+
+" incsearch
+" map /  <Plug>(incsearch-forward)
+" map ?  <Plug>(incsearch-backward)
+" map g/ <Plug>(incsearch-stay)
+" https://github.com/haya14busa/incsearch-easymotion.vim#usage
+map / <Plug>(incsearch-easymotion-/)
+map ? <Plug>(incsearch-easymotion-?)
+map g/ <Plug>(incsearch-easymotion-stay)
+" https://github.com/haya14busa/incsearch-fuzzy.vim#fuzzyspell-search
+map <Leader>/ <Plug>(incsearch-fuzzyspell-/)
+map <Leader>? <Plug>(incsearch-fuzzyspell-?)
+map <Leader>g/ <Plug>(incsearch-fuzzyspell-stay)
 
 "Plugin 'lokaltog/vim-powerline'
 "set encoding=utf-8 " Necessary to show Unicode glyphs
@@ -73,7 +124,6 @@ set fillchars+=stl:\ ,stlnc:\
 let g:airline_theme             = 'powerlineish'
 let g:airline#extensions#branch#enabled = 1
 let g:airline#extensions#syntastic#enabled = 1
-
 
 " Editor display settings
 filetype plugin indent on   " Required
