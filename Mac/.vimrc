@@ -71,42 +71,52 @@ nmap <Leader>L <Plug>(easymotion-overwin-line)
 map  <Leader>w <Plug>(easymotion-bd-w)
 nmap <Leader>w <Plug>(easymotion-overwin-w)
 " Integration with incsearch.vim 
-" function! s:incsearch_config(...) abort
-"   return incsearch#util#deepextend(deepcopy({
-"   \   'modules': [incsearch#config#easymotion#module({'overwin': 1})],
-"   \   'keymap': {
-"   \     "\<CR>": '<Over>(easymotion)'
-"   \   },
-"   \   'is_expr': 0
-"   \ }), get(a:, 1, {}))
-" endfunction
-" noremap <silent><expr> /  incsearch#go(<SID>incsearch_config())
-" noremap <silent><expr> ?  incsearch#go(<SID>incsearch_config({'command': '?'}))
-" noremap <silent><expr> g/ incsearch#go(<SID>incsearch_config({'is_stay': 1}))
-" Bonus fuzzy-search with EasyMotion 
-" function! s:config_easyfuzzymotion(...) abort
-"   return extend(copy({
-"   \   'converters': [incsearch#config#fuzzyword#converter()],
-"   \   'modules': [incsearch#config#easymotion#module({'overwin': 1})],
-"   \   'keymap': {"\<CR>": '<Over>(easymotion)'},
-"   \   'is_expr': 0,
-"   \   'is_stay': 1
-"   \ }), get(a:, 1, {}))
-" endfunction
-" noremap <silent><expr> <Space>/ incsearch#go(<SID>config_easyfuzzymotion())
+" You can use other keymappings like <C-l> instead of <CR> if you want to
+" use these mappings as default search and somtimes want to move cursor with
+" EasyMotion.
+" Issue: show the same char mapping: https://github.com/easymotion/vim-easymotion/issues/361
+" Important: only use it for fuzzy search
+function! s:incsearch_config(...) abort
+  return incsearch#util#deepextend(deepcopy({
+  \   'modules': [incsearch#config#easymotion#module({'overwin': 1})],
+  \   'keymap': {
+  \     "\<CR>": '<Over>(easymotion)'
+  \   },
+  \   'is_expr': 0
+  \ }), get(a:, 1, {}))
+endfunction
+" noremap <silent><expr> <Leader>/  incsearch#go(<SID>incsearch_config())
+noremap <silent><expr> <Leader>?  incsearch#go(<SID>incsearch_config({'command': '?'}))
+noremap <silent><expr> <Leader>g/ incsearch#go(<SID>incsearch_config({'is_stay': 1}))
+
+function! s:config_easyfuzzymotion(...) abort
+  return extend(copy({
+  \   'converters': [incsearch#config#fuzzyword#converter()],
+  \   'modules': [incsearch#config#easymotion#module({'overwin': 1})],
+  \   'keymap': {"\<CR>": '<Over>(easymotion)'},
+  \   'is_expr': 0,
+  \   'is_stay': 1
+  \ }), get(a:, 1, {}))
+endfunction
+
+noremap <silent><expr> <Leader>/ incsearch#go(<SID>config_easyfuzzymotion())
 
 " incsearch
-" map /  <Plug>(incsearch-forward)
-" map ?  <Plug>(incsearch-backward)
-" map g/ <Plug>(incsearch-stay)
+" Important: use it for exact search
+" :h g:incsearch#auto_nohlsearch
+set hlsearch
+let g:incsearch#auto_nohlsearch = 1
+map n  <Plug>(incsearch-nohl-n)
+map N  <Plug>(incsearch-nohl-N)
+map *  <Plug>(incsearch-nohl-*)
+map #  <Plug>(incsearch-nohl-#)
+map g* <Plug>(incsearch-nohl-g*)
+map g# <Plug>(incsearch-nohl-g#)
+nnoremap <Esc><Esc> :<C-u>nohlsearch<CR>
 " https://github.com/haya14busa/incsearch-easymotion.vim#usage
 map / <Plug>(incsearch-easymotion-/)
 map ? <Plug>(incsearch-easymotion-?)
 map g/ <Plug>(incsearch-easymotion-stay)
-" https://github.com/haya14busa/incsearch-fuzzy.vim#fuzzyspell-search
-map <Leader>/ <Plug>(incsearch-fuzzyspell-/)
-map <Leader>? <Plug>(incsearch-fuzzyspell-?)
-map <Leader>g/ <Plug>(incsearch-fuzzyspell-stay)
 
 "Plugin 'lokaltog/vim-powerline'
 "set encoding=utf-8 " Necessary to show Unicode glyphs
