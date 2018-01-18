@@ -9,6 +9,8 @@ Quick installation guide for all settings
 ## Set up zsh
 ```shell
     # Install zsh
+    # https://gist.github.com/derhuerst/12a1558a4b408b3b2b6e
+    # Install Oh-my-zsh
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
     # Or --> curl -L http://install.ohmyz.sh | sh
 
@@ -126,8 +128,9 @@ Installation
 
 Installation:
 - Install with (official script)[https://github.com/creationix/nvm#install-script]
-－ `nvm ls` to check current node
-－ `nvm install vX.X.X` to install the latest node
+- `nvm ls` to check current node
+- `nvm install vX.X.X` to install the latest node
+- `nvm alias default stable` to update default to latest stable
 ```shell
     $ npm install -g babel-cli bower csslint codeclimate-test-reporter eslint flow-bin flow-typed gulp istanbul jasmine-node karma localtunnel npm-check npm-check-updates node-inspector nodemon plato pm2 webpack
 ```
