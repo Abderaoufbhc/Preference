@@ -127,7 +127,7 @@ Installation
 Installation:
 - Install with (official script)[https://github.com/creationix/nvm#install-script]
 － `nvm ls` to check current node
-－ `nvm install x.x` to install the latest node
+－ `nvm install vX.X.X` to install the latest node
 ```shell
     $ npm install -g babel-cli bower csslint codeclimate-test-reporter eslint flow-bin flow-typed gulp istanbul jasmine-node karma localtunnel npm-check npm-check-updates node-inspector nodemon plato pm2 webpack
 ```

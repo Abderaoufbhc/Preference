@@ -30,8 +30,8 @@
       "vim-mode"
       "todo-show"
       "kite"
-      "tree-view"
       "MagicPython"
+      "tree-view"
     ]
     excludeVcsIgnoredPaths: false
     ignoredNames: [
@@ -109,24 +109,11 @@
     "nuclide-working-sets":
       workingSets: [
         {
-          name: "TA"
+          name: "Crypto"
           active: true
           uris: [
-            "/Users/yfang/Code/Preference"
-            "/Users/yfang/Code/TA"
-            "/Users/yfang/Downloads"
-            "/Users/yfang/tr-data"
-            "/Users/yfang/tr-images"
-            "/Users/yfang/tr-langs"
-            "/Users/yfang/trsrc-MAINLINE"
-            "/Users/yfang/trsrc-branch"
-          ]
-        }
-        {
-          name: "DBDCapital"
-          active: true
-          uris: [
-            "/Users/yfang/Code/DBDCapital"
+            "/Users/yfang/Code/Crypto"
+            "/Users/yfang/Code/DBDCapital/Node"
             "/Users/yfang/Code/Preference"
           ]
         }
