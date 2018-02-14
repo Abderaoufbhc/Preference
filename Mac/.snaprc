@@ -17,6 +17,9 @@ if [[ -z $TMUX ]]; then
   if [ -f "$HOME/google-cloud-sdk/completion.zsh.inc" ]; then source "$HOME/google-cloud-sdk/completion.zsh.inc"; fi
 fi
 
+# groovy
+export GROOVY_HOME=/usr/local/opt/groovy/libexec
+
 #########################################################################################
 # Alias
 #########################################################################################

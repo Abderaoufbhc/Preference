@@ -2,6 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>AllowClipboardAccess</key>
+	<true/>
 	<key>AppleAntiAliasingThreshold</key>
 	<integer>1</integer>
 	<key>AppleScrollAnimationEnabled</key>
@@ -67,9 +69,9 @@
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>496 1818 620 392 -474 1050 2560 1417 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>817 1369 796 473 -130 1050 1920 1057 </string>
+	<string>745 304 796 473 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>758 1073 1032 1034 -130 1050 1920 1057 </string>
+	<string>839 0 836 1027 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>117 1157 850 707 -130 1050 1920 1057 </string>
 	<key>New Bookmarks</key>
@@ -1305,7 +1307,7 @@
 	<key>NoSyncInstallationId</key>
 	<string>B0AE15B6-B295-410E-8CA3-A7BDD319F2CF</string>
 	<key>NoSyncLastTipTime</key>
-	<real>534202505.47740799</real>
+	<real>537130366.72340703</real>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
@@ -1339,6 +1341,24 @@
 		<string>0019</string>
 		<string>0020</string>
 		<string>0021</string>
+		<string>0022</string>
+		<string>0023</string>
+		<string>0024</string>
+		<string>0025</string>
+		<string>0026</string>
+		<string>0027</string>
+		<string>0028</string>
+		<string>0029</string>
+		<string>0030</string>
+		<string>0031</string>
+		<string>0032</string>
+		<string>0033</string>
+		<string>0034</string>
+		<string>0035</string>
+		<string>0036</string>
+		<string>0037</string>
+		<string>0038</string>
+		<string>0039</string>
 	</array>
 	<key>PointerActions</key>
 	<dict>
@@ -1384,9 +1404,15 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2017-12-04T03:58:29Z</date>
+	<date>2018-01-07T05:53:51Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
+	<key>SavePasteHistory</key>
+	<true/>
+	<key>ShowFullScreenTabBar</key>
+	<false/>
+	<key>SmartPlacement</key>
+	<true/>
 	<key>WordCharacters</key>
 	<string>/-+\~_.</string>
 	<key>findMode_iTerm</key>

@@ -193,3 +193,5 @@ Easy Motion: https://github.com/easymotion/vim-easymotion/blob/master/doc/easymo
 
 
 Vim list: https://vimawesome.com/
+
+Shift + * search current work
