@@ -30,8 +30,8 @@
       "vim-mode"
       "todo-show"
       "kite"
-      "MagicPython"
       "tree-view"
+      "MagicPython"
     ]
     excludeVcsIgnoredPaths: false
     ignoredNames: [
@@ -95,6 +95,7 @@
       revealFileOnSwitch: true
     "nuclide-flow":
       enableStructuredTypeHints: true
+      pathToFlow: "/Users/yfang/.nvm/versions/node/v6.3.1/bin/flow"
     "nuclide-format-js": {}
     "nuclide-hack": {}
     "nuclide-health": {}
@@ -108,12 +109,34 @@
     "nuclide-working-sets":
       workingSets: [
         {
-          name: "Crypto"
+          name: "TA"
           active: true
           uris: [
-            "/Users/yfang/Code/Crypto"
-            "/Users/yfang/Code/DBDCapital/Node"
             "/Users/yfang/Code/Preference"
+            "/Users/yfang/Code/TA"
+            "/Users/yfang/Downloads"
+            "/Users/yfang/tr-data"
+            "/Users/yfang/tr-images"
+            "/Users/yfang/tr-langs"
+            "/Users/yfang/trsrc-MAINLINE"
+            "/Users/yfang/trsrc-branch"
+          ]
+        }
+        {
+          name: "DBDCapital"
+          active: true
+          uris: [
+            "/Users/yfang/Code/DBDCapital"
+            "/Users/yfang/Code/Preference"
+          ]
+        }
+        {
+          name: "Snap-release"
+          active: true
+          uris: [
+            "/Users/lucas.fang/Code/Preference"
+            "/Users/lucas.fang/Code/Snap/ranking-release"
+            "/Users/lucas.fang/Code/Snap/ranking-tools"
           ]
         }
       ]
