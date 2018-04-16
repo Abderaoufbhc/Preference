@@ -4,7 +4,9 @@
 #########################################################################################
 
 # git-subrepo
-source ~/Code/Snap/git-subrepo/.rc
+if [[ -z ~/Code/Snap/git-subrepo/.rc ]]; then
+  source ~/Code/Snap/git-subrepo/.rc
+fi
 
 # Prevent tmux from duplicating PATH
 # https://stackoverflow.com/questions/13058578/how-to-prevent-tmux-from-filling-up-the-global-path-variable-with-duplicated-pat
@@ -21,8 +23,10 @@ if [[ -z $TMUX ]]; then
 fi
 
 # java
-export JAVA_HOME=`/usr/libexec/java_home -v 1.7`
-export PATH=$JAVA_HOME/bin:$PATH
+if [[ -z /usr/libexec/java_home ]]; then
+  export JAVA_HOME=`/usr/libexec/java_home -v 1.7`
+  export PATH=$JAVA_HOME/bin:$PATH
+fi
 
 # groovy
 export GROOVY_HOME=/usr/local/opt/groovy/libexec
