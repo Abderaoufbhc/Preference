@@ -73,7 +73,7 @@
 	<key>NSWindow Frame SharedPreferences</key>
 	<string>745 304 796 473 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>588 0 1088 1027 0 0 1680 1027 </string>
+	<string>0 -1 836 1027 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>117 1157 850 707 -130 1050 1920 1057 </string>
 	<key>New Bookmarks</key>
@@ -1440,7 +1440,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2018-03-12T17:07:33Z</date>
+	<date>2018-04-17T17:53:13Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SavePasteHistory</key>

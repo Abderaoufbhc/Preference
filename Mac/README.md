@@ -38,49 +38,6 @@ Quick installation guide for all settings
     apm install --packages-file ~/.atom/package-list.txt
 ```
 
-## Application:
-
-#### Browser
-  - Firefox, Chrome
-
-#### Cloud Storage
-  - CloudApp, Dropbox, Google Drive(set folder name to “GoogleDrive”)
-
-#### Development
-  - Adobe
-    - Photoshop, Illustrator
-  - IDE/Tool
-    - Android
-      - Android Studio, Eclipse
-    - iOS
-      - iOS Console, Prepo, Spark Inspector, XCode
-    - Others
-      - CodeRunner
-  - Database
-    - MySQLWorkbench, Robomongo, Navicat, sqlitebrowser
-  - Decompiler
-    - [jadx](https://github.com/skylot/jadx), [Java Decompiler](http://jd.benow.ca/)
-  - Network Communication
-    - CocoaRestClient, LightBlue, WireShark
-  - Server
-    - MAMP Pro
-  - Text Editor
-    - Atom, Brackets, Sublime
-  - Utility
-    - Hex Fiend, FileZilla, Reflector, Skitch, TeamViewer, SourceTree(From website) - DiffMerge, Latern
-    - Mac Specific
-      - Flycut, Free Ruler 1.7b5, Go2Shell(From Website), InVisible, SizeUp
-
-#### Others
-  - Office
-    - Microsoft Excel/OneNote/Word
-  - Music
-    - GarageBand, Sibelius 7, Spotify, Virtual MIDI Piano Keyboard (Sourceforge)
-  - Utility
-    - BitTorrent, Clean My Mac 3, The Unarchiver
-  - Others
-    - Steam, Popcorn-Time, Skype, VLC, MPlayerX, WeChat, 搜狐影音, 有道词典, 爱奇艺视频
-
 ---
 
 ## Languages/Platform & Package Manager
@@ -97,7 +54,7 @@ Installation
 Packages to install
 ```shell
     $ brew update
-    $ brew install watch, watchman, the_silver_searcher
+    $ brew install watch watchman the_silver_searcher
 ```
 
 #### Swift & Objective-C dependency manager: [CocoaPods](https://cocoapods.org/)
@@ -157,6 +114,7 @@ System-wide installation [tutorial](https://pear.php.net/manual/en/installation.
 ## Command Line
 
 #### Terminal/iTerm2
+- Load preference plist
 - Preferences -> General - [Guide](https://stackoverflow.com/questions/6205157/iterm-2-how-to-set-keyboard-shortcuts-to-jump-to-beginning-end-of-line)
   - Load preferences from a custom folder or URL
   - Save settings to Folder
@@ -241,8 +199,12 @@ System-wide installation [tutorial](https://pear.php.net/manual/en/installation.
 
 ---
 
-## Preferences
+## Reinstall
+- Erase image
+  - Name: Macintosh HD
+  - Format: Mac OS Extended (Journaled) - turn on FireVault later
 
+## Preferences
 - System Preferences
   - Security & Privacy
     - General: Show a message when the screen is locked
@@ -250,29 +212,37 @@ System-wide installation [tutorial](https://pear.php.net/manual/en/installation.
   - Sharing
     - Computer Name: Compass
     - Enable: remote login, Remote Mangement
-  - TrackPad: Choose All
+  - TrackPad:
+    - Option: Choose All
+    - Speed: fastest
+    - 3-finger drag: https://support.apple.com/en-us/HT204609
   - Keyboard:
-    - Shortcuts - Input Sources: Sportlight - Show Spotlight search: ^Space
+    - Shortcuts - Input Sources: Sportlight - Show Spotlight search: ^ + Space
   - Input Sources: Add Simplified Chineseter
   - Date & Time
     - Show date
     - Time Zone: Set time zone automatically
   - Users & Groups
-    - Login Items: Flycut, iTerm2
+    - Login Items: Flycut, GoogleDrive, Magnet, CloudApp, Snagit
     - Login Options: Show fast user switching menu as “Full Name”
   - Internet Accounts:
     - iCloud: Turn on all
-  - Energy Saver:
-    - Battery:
-    - Power Adapter: Computer sleep - Never; Display sleep - 2
+  - Energy Saver - default
 
 - Finder
+  - Show all insivible files
+    - `defaults write com.apple.finder AppleShowAllFiles YES`
+    - Hold the ‘Option/alt’ key, then right click on the Finder icon in the dock and click Relaunch
   - View: Show Tab Bar, Path Bar, Status Bar
+  - Preference: Show all filename extensions
   - Sort by Type
+  - Favorites: User, Code, Company, Photo, GoogleDrive, Downloads, Documents, Applications, iCloud Drive, AirDrop, Recents
 
-- Docker:
+- Dock:
   - Position: Left
-  - Items: Finder, Chrome, Safari, Calendar, Notes, Sublime, SourceTree, YouDao, Terminal
+  - Size: middle to left
+  - Magnification: middle to right
+  - Items: Finder, Chrome, Calendar, Notes, Sublime, SourceTree, YouDao, iTerm2
 
 - Calendar
   - General: Show “18” hours at a time, Deafult Calendar: Apollo
@@ -296,6 +266,54 @@ System-wide installation [tutorial](https://pear.php.net/manual/en/installation.
   - xip.io [allows non-local device](http://simianstudios.com/blog/post/xip.io-mamp-pro-super-easy-local-network-testing) to access the pages:
     - Without xip: ```http://chai:8888/PS2/ssotest.php```
     - With xip: ```http://chai.192.168.0.111.xip.io:8888/PS2/ssotest.php```
+
+## Application:
+
+#### Browser
+  - Chrome
+  - Deprecated: Firefox
+
+#### Cloud Storage
+  - Google Drive
+    - set folder name to “GoogleDrive”
+    - Leave out Shared_NoSync
+  - CloudApp
+  - Deprecated: Dropbox
+
+#### Development
+  - Adobe
+    - Photoshop, Illustrator, Premiere, After Effects, Lightroom
+  - IDE/Tool
+    - Android
+      - Android Studio, Eclipse
+    - iOS
+      - iOS Console, Prepo, Spark Inspector, XCode
+    - Others
+      - CodeRunner
+  - Database
+    - MySQLWorkbench, Robomongo, Navicat, sqlitebrowser
+  - Decompiler
+    - [jadx](https://github.com/skylot/jadx), [Java Decompiler](http://jd.benow.ca/)
+  - Network Communication
+    - CocoaRestClient, LightBlue, WireShark
+  - Server
+    - MAMP Pro
+  - Text Editor
+    - Atom, Brackets, Sublime
+  - Utility
+    - Hex Fiend, FileZilla, Reflector, Skitch, TeamViewer, SourceTree(From website) - DiffMerge, Latern
+    - Mac Specific
+      - Flycut, Free Ruler 1.7b5, Go2Shell(From App Store)
+
+#### Others
+  - Office
+    - Microsoft Excel/OneNote/Word
+  - Music
+    - GarageBand, Sibelius 7, Spotify, Virtual MIDI Piano Keyboard (Sourceforge), QQ Music, Netease Music
+  - Utility
+    - BitTorrent, Clean My Mac 3, The Unarchiver, Magnet, Snagit
+  - Others
+    - Steam, Popcorn-Time, Skype, VLC, MPlayerX, WeChat, 搜狐影音, 有道词典, 爱奇艺视频
 
 ---
 
