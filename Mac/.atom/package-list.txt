@@ -19,6 +19,7 @@ language-graphql@0.10.0
 language-groovy@0.7.0
 language-haskell@1.17.4
 language-ini@1.19.0
+language-kotlin@0.5.0
 language-lua@0.9.11
 language-ocaml@1.9.5
 language-rust@0.4.12
