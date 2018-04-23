@@ -315,6 +315,17 @@ System-wide installation [tutorial](https://pear.php.net/manual/en/installation.
   - Others
     - Steam, Popcorn-Time, Skype, VLC, MPlayerX, WeChat, 搜狐影音, 有道词典, 爱奇艺视频
 
+#### Copy stuff
+  - Cloud drive
+    - let GoogleDrive & iCloud drive sync
+  - Folder:
+    - Code, Movies
+  - Settings:
+    - Preference. gather_settings.sh
+    - iTerm2, IntelliJ
+    - Huion Tablet
+  - external drive backup
+
 ---
 
 ## To-Read
