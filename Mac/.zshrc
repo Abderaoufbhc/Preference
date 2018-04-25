@@ -220,4 +220,3 @@ fullHostName=`hostname -f`
 if [ -f ~/.snaprc ]; then
   source ~/.snaprc
 fi
-

@@ -109,8 +109,8 @@
     "nuclide-working-sets":
       workingSets: [
         {
-          active: true
           name: "TA"
+          active: true
           uris: [
             "/Users/yfang/Code/Preference"
             "/Users/yfang/Code/TA"
@@ -123,16 +123,16 @@
           ]
         }
         {
-          active: true
           name: "DBDCapital"
+          active: true
           uris: [
             "/Users/yfang/Code/DBDCapital"
             "/Users/yfang/Code/Preference"
           ]
         }
         {
-          active: true
           name: "Snap-release"
+          active: false
           uris: [
             "/Users/lucas.fang/Code/Preference"
             "/Users/lucas.fang/Code/Snap/ranking-release"

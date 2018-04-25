@@ -38,13 +38,17 @@ export GROOVY_HOME=/usr/local/opt/groovy/libexec
 # git-review
 alias gr='git-review'
 
-
 # GKE
 # usage: gke_all dev f cron-scheduler-dev
 gke_all () {
-   gcloud container clusters get-credentials --project=context-$1 --zone=us-central1-$2 $3
+  gcloud container clusters get-credentials --project=context-$1 --zone=us-central1-$2 $3
 }
-gke_dev ()
-{
-   gcloud container clusters get-credentials --project=context-dev --zone=us-central1-f cron-scheduler-dev
+gke_dev () {
+  gcloud container clusters get-credentials --project=context-dev --zone=us-central1-f cron-scheduler-dev
+}
+gke_prod () {
+  gcloud container clusters get-credentials --project=context-prod --zone=us-central1-c cron-scheduler-prod
+}
+gke_eng () {
+  gcloud container clusters get-credentials  --project context-eng --zone us-west1-a jenkins
 }

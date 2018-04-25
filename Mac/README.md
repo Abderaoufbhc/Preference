@@ -51,9 +51,12 @@ Installation
     $ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
 
+Cheat sheet: https://devhints.io/homebrew
+
 Packages to install
 ```shell
     $ brew update
+    $ brew tap yinanfang/Preference https://github.com/yinanfang/Preference
     $ brew install watch watchman the_silver_searcher
 ```
 
