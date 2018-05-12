@@ -112,6 +112,18 @@ System-wide installation [tutorial](https://pear.php.net/manual/en/installation.
     $ sudo php -d detect_unicode=0 go-pear.phar
 ```
 
+### Groovy
+- Install groovysdk:
+```
+brew remove groovy
+brew install groovysdk
+```
+- Set GROOVY_HOME, otherwise Intellij reports as broken installation:
+```
+export GROOVY_HOME=/usr/local/opt/groovy/libexec
+```
+Point IntelliJ to the installed directory, e.g.: `/usr/local/Cellar/groovysdk/2.4.7/libexec`
+- Source: https://stackoverflow.com/questions/41110256/how-do-i-tell-intellij-about-groovy-installed-with-brew-on-osx
 ---
 
 ## Command Line
