@@ -57,7 +57,7 @@ Packages to install
 ```shell
     $ brew update
     $ brew tap yinanfang/Preference https://github.com/yinanfang/Preference
-    $ brew install watch watchman the_silver_searcher
+    $ brew install watch watchman the_silver_searcher tree
 ```
 
 #### Swift & Objective-C dependency manager: [CocoaPods](https://cocoapods.org/)
@@ -296,8 +296,6 @@ Point IntelliJ to the installed directory, e.g.: `/usr/local/Cellar/groovysdk/2.
   - Deprecated: Dropbox
 
 #### Development
-  - Adobe
-    - Photoshop, Illustrator, Premiere, After Effects, Lightroom
   - IDE/Tool
     - Android
       - Android Studio, Eclipse
@@ -320,6 +318,13 @@ Point IntelliJ to the installed directory, e.g.: `/usr/local/Cellar/groovysdk/2.
     - Mac Specific
       - Flycut, Free Ruler 1.7b5, Go2Shell(From App Store)
 
+#### Adobe
+    - Photoshop, Illustrator, Premiere, After Effects
+    - Lightroom
+      - Presets: Store presets with this catalog
+      - Back up:
+        - Once a week
+        - Location: ~/GoogleDrive/Photot/General/Backups
 #### Others
   - Office
     - Microsoft Excel/OneNote/Word
@@ -338,8 +343,22 @@ Point IntelliJ to the installed directory, e.g.: `/usr/local/Cellar/groovysdk/2.
   - Settings:
     - Preference. gather_settings.sh
     - iTerm2, IntelliJ
-    - Huion Tablet
+    - Huion Tablet Q11K
   - external drive backup
+
+---
+
+## TODOs before Reinstall
+- Backup Guide
+  - Automated preference collection: `https://github.com/yinanfang/Preference/blob/master/gather_settings.sh`
+  - Manual export
+    - iTerm2 profiles
+    - IntelliJ settings
+- Already setup but should double check:
+  - Lightroom Preset from `~/Library/Application Support/Adobe/Lightroom`
+    - Develop Presets
+    - Import Presets
+    - Export Presets
 
 ---
 
