@@ -92,10 +92,11 @@ Installation:
 - `nvm install vX.X.X` to install the latest node
 - `nvm alias default stable` to update default to latest stable
 ```shell
-    $ npm install -g babel-cli bower csslint codeclimate-test-reporter eslint flow-bin flow-typed gulp istanbul jasmine-node karma localtunnel npm-check npm-check-updates node-inspector nodemon plato pm2 webpack
+    $ npm install -g babel-cli bower csslint codeclimate-test-reporter eslint flow-bin flow-typed gulp istanbul jasmine-node karma localtunnel npm-check npm-check-updates nodemon plato pm2 webpack yarn
 ```
   - Non-global item: express
   - Accessary items: generator-gulp-angular generator-gulp-webapp, learnyounode mean-cli yo
+  - Deprecated?: node-inspector
 
 
 #### Python package manager: gem?
@@ -354,6 +355,7 @@ Point IntelliJ to the installed directory, e.g.: `/usr/local/Cellar/groovysdk/2.
   - Manual export
     - iTerm2 profiles
     - IntelliJ settings
+  - Files in ~/Code that's not version controlled
 - Already setup but should double check:
   - Lightroom Preset from `~/Library/Application Support/Adobe/Lightroom`
     - Develop Presets
