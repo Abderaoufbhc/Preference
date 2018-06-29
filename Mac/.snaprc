@@ -50,5 +50,9 @@ gke_prod () {
   gcloud container clusters get-credentials --project=context-prod --zone=us-central1-c cron-scheduler-prod
 }
 gke_eng () {
-  gcloud container clusters get-credentials  --project context-eng --zone us-west1-a jenkins
+  gcloud container clusters get-credentials --project context-eng --zone us-west1-a jenkins
 }
+gke_jupyterhub () {
+  gcloud container clusters get-credentials --project context-dev --zone us-central1-c jupyterhub-vellum
+}
+
