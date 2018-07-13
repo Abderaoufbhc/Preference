@@ -12,7 +12,8 @@ curl https://raw.githubusercontent.com/yinanfang/Preference/master/Mac/.tmux.con
 if [ ! -d ~/.tmuxinator ]; then
   mkdir ~/.tmuxinator
 fi
-curl https://raw.githubusercontent.com/yinanfang/Preference/master/Mac/.tmuxinator/trip.yml > ~/.tmuxinator/trip.ymp
+curl https://raw.githubusercontent.com/yinanfang/Preference/master/Mac/.tmuxinator/trip.yml > ~/.tmuxinator/trip.yml
+curl https://raw.githubusercontent.com/yinanfang/Preference/master/Mac/.tmuxinator/snap.yml > ~/.tmuxinator/snap.yml
 
 curl https://raw.githubusercontent.com/yinanfang/Preference/master/Mac/.atom/package-list.txt > ~/.atom/package-list.txt
 curl https://raw.githubusercontent.com/yinanfang/Preference/master/Mac/.atom/config.cson > ~/.atom/config.cson
