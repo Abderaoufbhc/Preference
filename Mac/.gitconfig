@@ -1,8 +1,8 @@
 [user]
-	email = yinanfang@gmail.com
-	name = Lucas Fang
+  email = yinanfang@gmail.com
+  name = Lucas Fang
 [push]
-	default = simple
+  default = simple
 [alias]
   st = status
   ci = commit -v
@@ -11,17 +11,17 @@
   unstage = reset HEAD --
   last = log -1 HEAD
 [core]
-	excludesfile = /Users/lucas.fang/.gitignore_global
+  excludesfile = /Users/lucas.fang/.gitignore_global
 [difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
+  cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+  path =
 [mergetool "sourcetree"]
-	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
+  cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+  trustExitCode = true
 [commit]
-	template = /Users/yfang/.stCommitMsg
+  template = /Users/yfang/.stCommitMsg
 [gerrit]
-	username = yfang
+  username = yfang
 [credential]
   # cache the result for 20 days. 30 days doesn't work
   helper = cache --timeout=1728000

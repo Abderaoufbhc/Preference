@@ -57,7 +57,7 @@ Packages to install
 ```shell
     $ brew update
     $ brew tap yinanfang/Preference https://github.com/yinanfang/Preference
-    $ brew install watch watchman the_silver_searcher tree
+    $ brew install watch watchman the_silver_searcher ripgrep tree
 ```
 
 #### Swift & Objective-C dependency manager: [CocoaPods](https://cocoapods.org/)
@@ -92,7 +92,7 @@ Installation:
 - `nvm install vX.X.X` to install the latest node
 - `nvm alias default stable` to update default to latest stable
 ```shell
-    $ npm install -g babel-cli babel-eslint bower csslint codeclimate-test-reporter eslint flow-bin flow-typed gulp istanbul jasmine-node karma localtunnel npm-check npm-check-updates nodemon plato pm2 webpack yarn 
+    $ npm install -g babel-cli babel-eslint bower csslint codeclimate-test-reporter eslint flow-bin flow-typed gulp istanbul jasmine-node karma localtunnel npm-check npm-check-updates nodemon plato pm2 webpack yarn
 ```
   - Non-global item: express
   - Accessary items: generator-gulp-angular generator-gulp-webapp, learnyounode mean-cli yo

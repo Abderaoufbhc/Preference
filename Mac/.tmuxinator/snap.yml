@@ -57,4 +57,3 @@ windows:
       panes:
         - source vir_search-ranking/bin/activate && cd search-ranking
         - source vir_search-ranking/bin/activate && cd search-ranking
-
