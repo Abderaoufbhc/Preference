@@ -25,8 +25,44 @@ Quick installation guide for all settings
 
 ## Set up vim
 ```shell
+    # Install dependencies
+    #
+    # Mac Powerline patched fonts for iTerm2? to show special characters
+    git clone https://github.com/powerline/fonts ~/Download
+    cd ~/Download/fonts && ./install.sh && cd ~
+    # Change to a Powerline font
+    # iTerm2 -> Preference -> Profiles -> Ta-Da -> Text -> Change Front -> 12pt Fira Mono Medium for Powerline
+    #
+    # Homebrew Tap for Universal Ctags for 'majutsushi/tagbar'
+    # Mac: https://github.com/universal-ctags/homebrew-universal-ctags
+    brew install --HEAD universal-ctags/universal-ctags/universal-ctags
+    # Linux: https://github.com/universal-ctags/ctags/blob/master/docs/autotools.rst
+    ./autogen.sh
+    ./configure --prefix=/where/you/want # defaults to /usr/local
+    make
+    make install # may require extra privileges depending on where to install
+
+    # Install Vim-Plug and plugins
     git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
     vim +PluginInstall +qall
+```
+
+## Set up Neovim
+```shell
+    # Install neovim
+    brew update && brew install neovim
+    pip install setuptools && pip install --upgrade neovim
+
+    # Open nvim and run health check
+    :CheckHealth
+
+    # Install vim-plug: https://github.com/junegunn/vim-plug
+    curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+    ln -s ~/.config/nvim/init.vim ~/.nvimrc
+
+    # Install plugins
+    v +PlugUpdate
+
 ```
 
 ## Set up Atom
@@ -57,7 +93,7 @@ Packages to install
 ```shell
     $ brew update
     $ brew tap yinanfang/Preference https://github.com/yinanfang/Preference
-    $ brew install watch watchman the_silver_searcher ripgrep tree
+    $ brew install fzf watch watchman the_silver_searcher ripgrep tree
 ```
 
 #### Swift & Objective-C dependency manager: [CocoaPods](https://cocoapods.org/)
@@ -92,7 +128,7 @@ Installation:
 - `nvm install vX.X.X` to install the latest node
 - `nvm alias default stable` to update default to latest stable
 ```shell
-    $ npm install -g babel-cli babel-eslint bower csslint codeclimate-test-reporter eslint flow-bin flow-typed gulp istanbul jasmine-node karma localtunnel npm-check npm-check-updates nodemon plato pm2 webpack yarn
+    $ npm install -g babel-cli babel-eslint bower csslint codeclimate-test-reporter eslint flow-bin flow-typed gulp istanbul jasmine-node karma localtunnel neovim npm-check npm-check-updates nodemon plato pm2 webpack yarn
 ```
   - Non-global item: express
   - Accessary items: generator-gulp-angular generator-gulp-webapp, learnyounode mean-cli yo

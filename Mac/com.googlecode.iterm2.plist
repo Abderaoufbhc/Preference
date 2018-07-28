@@ -68,12 +68,16 @@
 		<key>TB Is Shown</key>
 		<integer>1</integer>
 	</dict>
+	<key>NSWindow Frame NSFontPanel</key>
+	<string>1025 110 589 314 0 0 1680 1027 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
-	<string>530 476 620 392 0 0 1680 1027 </string>
+	<string>1499 1548 620 392 849 1050 1920 1057 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>745 304 796 473 0 0 1680 1027 </string>
+	<string>748 377 918 401 0 0 1680 1027 </string>
+	<key>NSWindow Frame UKCrashReporter</key>
+	<string>127 443 592 584 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 0 836 1027 0 0 1680 1027 </string>
+	<string>48 0 1144 1027 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>117 1157 850 707 -130 1050 1920 1057 </string>
 	<key>New Bookmarks</key>
@@ -81,6 +85,8 @@
 		<dict>
 			<key>ASCII Anti Aliased</key>
 			<true/>
+			<key>ASCII Ligatures</key>
+			<false/>
 			<key>Ambiguous Double Width</key>
 			<false/>
 			<key>Ansi 0 Color</key>
@@ -646,7 +652,7 @@
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>Monaco 12</string>
+			<string>FiraMonoForPowerline-Medium 12</string>
 			<key>Only The Default BG Color Uses Transparency</key>
 			<false/>
 			<key>Option Key Sends</key>
@@ -1309,7 +1315,7 @@
 	<key>NoSyncInstallationId</key>
 	<string>B0AE15B6-B295-410E-8CA3-A7BDD319F2CF</string>
 	<key>NoSyncLastTipTime</key>
-	<real>540941081.24091101</real>
+	<real>552298445.63900006</real>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
@@ -1393,6 +1399,7 @@
 		<string>0069</string>
 		<string>0070</string>
 		<string>0071</string>
+		<string>0071</string>
 	</array>
 	<key>PasteTabToStringTabStopSize</key>
 	<integer>4</integer>
@@ -1440,7 +1447,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2018-05-04T21:59:08Z</date>
+	<date>2018-07-26T17:34:24Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SavePasteHistory</key>
@@ -1454,7 +1461,7 @@
 	<key>findMode_iTerm</key>
 	<integer>0</integer>
 	<key>iTerm Version</key>
-	<string>3.1.6</string>
+	<string>3.1.7</string>
 	<key>kCPKSelectionViewPreferredModeKey</key>
 	<integer>0</integer>
 	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>

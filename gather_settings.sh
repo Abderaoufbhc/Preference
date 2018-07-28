@@ -25,8 +25,10 @@ sync() {
   countOfSlashes=$(echo "${partialRelativePath}" | awk -F "/" '{print NF-1}')
   if [ $countOfSlashes -gt 1 ]; then                            # countOfSlashes = 2
 
+    dir=`dirname $fullSourceFilePath`
     # Stop the sync if current machine doesn't have this folder
-    if [ ! -d `dirname $fullSourceFilePath` ]; then
+    if [ ! -d $dir ]; then
+      echo "Missing folder at ${dir}"
       return
     fi
 
@@ -48,6 +50,8 @@ shout() {
 shout "personal shell"
 sync ~/.zshrc
 sync ~/.vimrc
+sync ~/.config/nvim/init.vim
+
 
 if [ -f ~/.tarc ]; then
   shout "TripAdvisor shell"

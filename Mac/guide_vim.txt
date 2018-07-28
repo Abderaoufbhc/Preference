@@ -2,14 +2,6 @@
 
 Tutorial about vim
 
-###### Two extrea steps for Mac patched fonts
-
-    $ git clone https://github.com/powerline/fonts
-    $ ./fonts/install.sh
-    $ rm -rf ./fonts
-
-In Terminal/iTerm Preference, choose font "11pt Fira Mono Medium for Powerline"
-
 ## Detailed Tutorial:
 1. Install instruction and some preferred plugins
   http://c7.se/switching-to-vundle/
@@ -127,6 +119,7 @@ Moving the brush (Motion)
 Visual Mode
     v - start visual mode
     V - start linewise visual mode
+    Ctrl-v start blockwise visual mode
 
 Picking up the brush
   ESC

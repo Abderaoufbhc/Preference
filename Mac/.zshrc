@@ -74,10 +74,10 @@ fi
 
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR='vim'
+  export EDITOR='nvim'
 else
   # export EDITOR='atom' # may cause issue when some command line script may quit
-  export EDITOR='vim'
+  export EDITOR='nvim'
 fi
 
 # nvm specifics
@@ -139,8 +139,9 @@ alias ps='ps aux'
 alias restartShell='exec -l $SHELL'
 
 # Edit
-alias vi=vim
-alias v=vim
+alias v=nvim
+alias vi=nvim
+alias vu='v +PlugUpdate'
 
 # source specific
 alias sc='source ~/.zshrc'
