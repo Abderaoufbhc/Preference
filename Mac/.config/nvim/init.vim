@@ -26,8 +26,9 @@ Plug 'Lokaltog/vim-easymotion'                      " Vim motions on speed
 Plug 'haya14busa/incsearch.vim'                     " Improved incremental searching for Vim
 Plug 'haya14busa/incsearch-fuzzy.vim'               " incsearch fuzzy support
 Plug 'haya14busa/incsearch-easymotion.vim'          " incsearch-easymotion integration
-Plug 'ctrlpvim/ctrlp.vim'                           " Fuzzy file, buffer, mru, tag, etc finder
-Plug 'Lokaltog/vim-easymotion'                    " Vim motions on speed
+Plug 'Lokaltog/vim-easymotion'                      " Vim motions on speed
+Plug '/usr/local/opt/fzf'                           " fzf & vim
+Plug 'junegunn/fzf.vim'
 
 " Language Support
 Plug 'majutsushi/tagbar', { 'on': 'TagbarToggle' }  " displays tags in a window, ordered by scope
@@ -36,6 +37,7 @@ Plug 'majutsushi/tagbar', { 'on': 'TagbarToggle' }  " displays tags in a window,
 " Plug 'tpope/vim-fugitive'
 " Plug 'scrooloose/syntastic'                       " Syntax checking hacks for vim. Report too many errors if using other build tool like bazel
 " Plug 'tpope/vim-repeat'                           " enable repeating supported plugin maps with .
+" Plug 'ctrlpvim/ctrlp.vim'                         " Fuzzy file, buffer, mru, tag, etc finder
 
 call plug#end()
 
@@ -208,6 +210,9 @@ function! s:config_easyfuzzymotion(...) abort
 endfunction
 noremap <silent><expr> <leader>/ incsearch#go(<SID>config_easyfuzzymotion())
 
+" fzf
+nmap <C-f> :Files<CR>
+let $FZF_DEFAULT_COMMAND = 'ag --hidden --ignore .git -g ""'
 
 "*****************************************************************************
 "" Language Support

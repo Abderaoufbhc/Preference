@@ -49,9 +49,19 @@ Quick installation guide for all settings
 
 ## Set up Neovim
 ```shell
-    # Install neovim
+    # Install nvim
     brew update && brew install neovim
+    # Install nvim python support
     pip install setuptools && pip install --upgrade neovim
+
+    # Install dependencies
+    # https://github.com/junegunn/fzf
+    # Mac
+    brew install fzf
+    $(brew --prefix)/opt/fzf/install # Install useful key bindings and fuzzy completion
+    # Linux
+    git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+    ~/.fzf/install
 
     # Open nvim and run health check
     :CheckHealth
@@ -92,7 +102,7 @@ Cheat sheet: https://devhints.io/homebrew
 Packages to install
 ```shell
     $ brew update
-    $ brew tap yinanfang/Preference https://github.com/yinanfang/Preference
+    # $ brew tap yinanfang/Preference https://github.com/yinanfang/Preference
     $ brew install fzf watch watchman the_silver_searcher ripgrep tree
 ```
 

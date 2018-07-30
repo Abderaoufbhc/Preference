@@ -210,6 +210,9 @@ alias mux="tmuxinator"
 # Load other settings
 ############################################
 
+# fzf auto-completion
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
 fullHostName=`hostname -f`
 
 # TripAdvisor configurations
@@ -221,3 +224,4 @@ fullHostName=`hostname -f`
 if [ -f ~/.snaprc ]; then
   source ~/.snaprc
 fi
+
