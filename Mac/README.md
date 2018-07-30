@@ -26,21 +26,12 @@ Quick installation guide for all settings
 ## Set up vim
 ```shell
     # Install dependencies
-    #
+    # Only on Mac
     # Mac Powerline patched fonts for iTerm2? to show special characters
     git clone https://github.com/powerline/fonts ~/Download
     cd ~/Download/fonts && ./install.sh && cd ~
     # Change to a Powerline font
     # iTerm2 -> Preference -> Profiles -> Ta-Da -> Text -> Change Front -> 12pt Fira Mono Medium for Powerline
-    #
-    # Homebrew Tap for Universal Ctags for 'majutsushi/tagbar'
-    # Mac: https://github.com/universal-ctags/homebrew-universal-ctags
-    brew install --HEAD universal-ctags/universal-ctags/universal-ctags
-    # Linux: https://github.com/universal-ctags/ctags/blob/master/docs/autotools.rst
-    ./autogen.sh
-    ./configure --prefix=/where/you/want # defaults to /usr/local
-    make
-    make install # may require extra privileges depending on where to install
 
     # Install Vim-Plug and plugins
     git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
@@ -50,11 +41,19 @@ Quick installation guide for all settings
 ## Set up Neovim
 ```shell
     # Install nvim
+    # Mac
     brew update && brew install neovim
-    # Install nvim python support
-    pip install setuptools && pip install --upgrade neovim
+    pip install setuptools && pip install --upgrade neovim # Install nvim python support
+    # Linux
+    # https://github.com/neovim/neovim/wiki/Installing-Neovim#user-content-ubuntu
 
-    # Install dependencies
+    # Font: Only on Mac
+    # Mac Powerline patched fonts for iTerm2? to show special characters
+    git clone https://github.com/powerline/fonts ~/Download
+    cd ~/Download/fonts && ./install.sh && cd ~
+    # Change to a Powerline font
+    # iTerm2 -> Preference -> Profiles -> Ta-Da -> Text -> Change Front -> 12pt Fira Mono Medium for Powerline
+
     # https://github.com/junegunn/fzf
     # Mac
     brew install fzf
@@ -63,8 +62,11 @@ Quick installation guide for all settings
     git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
     ~/.fzf/install
 
-    # Open nvim and run health check
-    :CheckHealth
+    # Homebrew Tap for Universal Ctags for 'majutsushi/tagbar'
+    # Mac: https://github.com/universal-ctags/homebrew-universal-ctags
+    brew install --HEAD universal-ctags/universal-ctags/universal-ctags
+    # Linux:
+    apt-get install ctags
 
     # Install vim-plug: https://github.com/junegunn/vim-plug
     curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
@@ -73,6 +75,8 @@ Quick installation guide for all settings
     # Install plugins
     v +PlugUpdate
 
+    # Open nvim and run health check
+    :CheckHealth
 ```
 
 ## Set up Atom
