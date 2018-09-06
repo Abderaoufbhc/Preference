@@ -27,8 +27,9 @@ Plug 'haya14busa/incsearch.vim'                     " Improved incremental searc
 Plug 'haya14busa/incsearch-fuzzy.vim'               " incsearch fuzzy support
 Plug 'haya14busa/incsearch-easymotion.vim'          " incsearch-easymotion integration
 Plug 'Lokaltog/vim-easymotion'                      " Vim motions on speed
-Plug '/usr/local/opt/fzf'                           " fzf & vim
-Plug 'junegunn/fzf.vim'
+Plug 'junegunn/fzf.vim'                             " fzf & vim
+Plug '/usr/local/opt/fzf'                           " for Mac if installed using Homebrew
+Plug '~/.fzf'                                       " for Linux if installed using git
 
 " Language Support
 Plug 'majutsushi/tagbar', { 'on': 'TagbarToggle' }  " displays tags in a window, ordered by scope
@@ -234,4 +235,3 @@ nmap <leader>t :TagbarToggle<CR>
 " let g:syntastic_check_on_open = 1
 " let g:syntastic_check_on_wq = 0
 " let g:syntastic_java_checkers = ['javac']
-

@@ -55,4 +55,7 @@ gke_eng () {
 gke_jupyterhub () {
   gcloud container clusters get-credentials --project context-dev --zone us-central1-c jupyterhub-vellum
 }
+gke_loadtest () {
+  gcloud container clusters get-credentials --project context-dev --zone us-central1-c loadtest-dev
+}
 
