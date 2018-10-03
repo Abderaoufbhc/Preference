@@ -1,14 +1,20 @@
 #!/bin/bash
 
 curl https://raw.githubusercontent.com/yinanfang/Preference/master/Mac/.zshrc > ~/.zshrc
-curl https://raw.githubusercontent.com/yinanfang/Preference/master/Mac/.tarc > ~/.tarc
-curl https://raw.githubusercontent.com/yinanfang/Preference/master/Mac/.snaprc > ~/.snaprc
+
+if [ ! -d ~/.ssh ]; then
+  mkdir -pv ~/.ssh
+fi
+curl https://raw.githubusercontent.com/yinanfang/Preference/master/Mac/.ssh/config > ~/.ssh/config
 
 curl https://raw.githubusercontent.com/yinanfang/Preference/master/Mac/.vimrc > ~/.vimrc
 if [ ! -d ~/.config/nvim ]; then
   mkdir -pv ~/.config/nvim
 fi
 curl https://raw.githubusercontent.com/yinanfang/Preference/master/Mac/.config/nvim/init.vim > ~/.config/nvim/init.vim
+
+curl https://raw.githubusercontent.com/yinanfang/Preference/master/Mac/.tarc > ~/.tarc
+curl https://raw.githubusercontent.com/yinanfang/Preference/master/Mac/.snaprc > ~/.snaprc
 
 curl https://raw.githubusercontent.com/yinanfang/Preference/master/Mac/.gitconfig > ~/.gitconfig
 

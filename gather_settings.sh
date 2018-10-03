@@ -49,9 +49,10 @@ shout() {
 # Shell config
 shout "personal shell"
 sync ~/.zshrc
+sync ~/.ssh/config
+
 sync ~/.vimrc
 sync ~/.config/nvim/init.vim
-
 
 if [ -f ~/.tarc ]; then
   shout "TripAdvisor shell"
