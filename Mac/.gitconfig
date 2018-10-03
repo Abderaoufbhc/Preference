@@ -35,5 +35,5 @@
 
 [credential]
   # cache the result for 20 days. 30 days doesn't work
-  # helper = cache --timeout=1728000
+  helper = cache --timeout=1728000
 
